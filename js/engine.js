@@ -300,7 +300,7 @@
 
   function injectStats() {
     const statCards = qsa('.stat-card');
-    if (!statCards.length || !cfg.stats.length) return;
+    if (!statCards.length || !cfg.stats || !cfg.stats.length) return;
 
     statCards.forEach((card, i) => {
       if (!cfg.stats[i]) return;
@@ -320,7 +320,7 @@
 
   function injectSocialProof() {
     const proofText = qs('.proof-info p');
-    if (proofText) {
+    if (proofText && cfg.stats && cfg.stats.length) {
       const count = cfg.stats[0] ? cfg.stats[0].count : 0;
       if (count > 0) {
         setHTML(proofText, `<strong>+${count} ${cfg.stats[0].label || 'Atendimentos'}</strong> realizados`);
