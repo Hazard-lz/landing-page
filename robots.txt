@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /obrigado
 
-Sitemap: https://hazard-lz.github.io/landing-page/sitemap.xml
+Sitemap: https://leonardo-gomes.vercel.app/sitemap.xml
