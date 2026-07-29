@@ -16,7 +16,7 @@ body.light-mode {
   /* Borders */
   --border-light:   rgba(15, 23, 42, 0.09);
   --border-color:   rgba(15, 23, 42, 0.12);
-  --border-active:  rgba(37, 99, 235, 0.45);
+  --border-active:  rgba(124, 58, 237, 0.45);
 
   /* Text */
   --text-main:    #0f172a;
@@ -25,7 +25,7 @@ body.light-mode {
   --primary-text: #1e40af;
 
   /* Gradients */
-  --grad-text:       linear-gradient(135deg, #0f172a 20%, #2563eb 100%);
+  --grad-text:       linear-gradient(135deg, #0f172a 20%, #7c3aed 100%);
   --grad-dark-card:  linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
 
   /* Shadows */
@@ -317,28 +317,6 @@ body.light-mode .benefit-icon {
   color: var(--primary) !important;
 }
 
-/* --- 12. Importance section --- */
-body.light-mode .importance-card {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04) !important;
-}
-body.light-mode .importance-card:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 15px 35px -10px var(--primary-glow) !important;
-}
-body.light-mode .importance-card h3 {
-  color: #0f172a !important;
-}
-body.light-mode .importance-card p {
-  color: #475569 !important;
-}
-body.light-mode .importance-icon {
-  background: var(--primary-glow) !important;
-  border-color: var(--border-active) !important;
-  color: var(--primary) !important;
-}
-
 /* --- 13. About section --- */
 body.light-mode .about-image {
   border-color: rgba(15, 23, 42, 0.08) !important;
@@ -365,24 +343,6 @@ body.light-mode .advantages-list li {
 body.light-mode .advantages-list li i {
   background: rgba(37, 99, 235, 0.1) !important;
   color: var(--primary) !important;
-}
-
-/* --- 14. Stats section --- */
-body.light-mode .stats-section {
-  background: linear-gradient(180deg, transparent 0%, rgba(37, 99, 235, 0.04) 50%, transparent 100%) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-body.light-mode .stat-card {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04) !important;
-}
-body.light-mode .stat-card:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 15px 35px -10px var(--primary-glow) !important;
-}
-body.light-mode .stat-label {
-  color: #64748b !important;
 }
 
 /* --- 15. Services section --- */
@@ -463,118 +423,7 @@ body.light-mode .step-icon {
   }
 }
 
-/* --- 17. Portfolio section --- */
-body.light-mode .portfolio-filter .filter-btn {
-  background: #ffffff !important;
-  color: #475569 !important;
-  border: 1px solid rgba(15, 23, 42, 0.12) !important;
-}
-body.light-mode .portfolio-filter .filter-btn:hover,
-body.light-mode .portfolio-filter .filter-btn.active {
-  background: var(--grad-primary) !important;
-  color: #ffffff !important;
-  border-color: transparent !important;
-}
-body.light-mode .portfolio-card {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04) !important;
-}
-body.light-mode .portfolio-card:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 15px 35px -10px var(--primary-glow) !important;
-}
-.portfolio-overlay h3,
-.portfolio-overlay p,
-.portfolio-overlay .portfolio-title,
-.portfolio-overlay .portfolio-desc,
-body.light-mode .portfolio-overlay h3,
-body.light-mode .portfolio-overlay p,
-body.light-mode .portfolio-overlay .portfolio-title,
-body.light-mode .portfolio-overlay .portfolio-desc {
-  color: #ffffff !important;
-}
-body.light-mode .portfolio-tag {
-  display: inline-flex !important;
-  align-items: center !important;
-  width: fit-content !important;
-  padding: 0.25rem 0.75rem !important;
-  border-radius: 9999px !important;
-  background: rgba(37, 99, 235, 0.85) !important;
-  border: 1px solid rgba(37, 99, 235, 0.6) !important;
-  color: #ffffff !important;
-  font-size: 0.7rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.5px !important;
-  text-transform: uppercase !important;
-}
-body.light-mode .lightbox-content {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.12) !important;
-  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15) !important;
-}
-body.light-mode .lightbox-close {
-  background: #ffffff !important;
-  color: #0f172a !important;
-  border: 1px solid rgba(15, 23, 42, 0.15) !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
-}
-body.light-mode .lightbox-close:hover {
-  background: var(--primary) !important;
-  color: #ffffff !important;
-  border-color: var(--primary) !important;
-  transform: scale(1.1) !important;
-}
-
 /* --- 18. Pricing section --- */
-.pricing-toggle-wrapper {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 1rem !important;
-  width: fit-content !important;
-  max-width: 100% !important;
-  margin: 0 auto 3.5rem !important;
-  padding: 0.55rem 1.5rem !important;
-  border-radius: 9999px !important;
-  background: var(--bg-card) !important;
-  border: 1px solid var(--border-light) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-}
-body.light-mode .pricing-toggle-wrapper {
-  background: #ffffff !important;
-  border: 1px solid rgba(15, 23, 42, 0.12) !important;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
-}
-body.light-mode .pricing-label {
-  color: #64748b !important;
-}
-body.light-mode .pricing-label.active {
-  color: #0f172a !important;
-}
-body.light-mode .pricing-toggle {
-  background: #cbd5e1 !important;
-  border-color: rgba(15, 23, 42, 0.18) !important;
-}
-body.light-mode .pricing-toggle.active {
-  background: var(--primary) !important;
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 14px var(--primary-glow) !important;
-}
-body.light-mode .pricing-toggle.active::before {
-  background: #ffffff !important;
-}
-body.light-mode .discount-badge-label {
-  background: rgba(37, 99, 235, 0.08) !important;
-  border-color: rgba(37, 99, 235, 0.25) !important;
-  color: var(--primary-text) !important;
-}
-body.light-mode .pricing-toggle-wrapper.annual-active .discount-badge-label {
-  background: var(--primary) !important;
-  color: #ffffff !important;
-}
 body.light-mode .pricing-card {
   background: #ffffff !important;
   border-color: rgba(15, 23, 42, 0.08) !important;
@@ -584,20 +433,10 @@ body.light-mode .pricing-card:hover {
   border-color: var(--primary) !important;
   box-shadow: 0 15px 35px -10px var(--primary-glow) !important;
 }
-body.light-mode .pricing-card.popular {
-  background: #ffffff !important;
-  border: 2px solid var(--primary) !important;
-  box-shadow: 0 15px 40px var(--primary-glow) !important;
-}
 body.light-mode .price-icon-box {
   background: var(--primary-glow) !important;
   border-color: var(--border-active) !important;
   color: var(--primary) !important;
-}
-body.light-mode .pricing-card.popular .price-icon-box {
-  background: var(--grad-primary) !important;
-  color: #ffffff !important;
-  border-color: transparent !important;
 }
 body.light-mode .price-title {
   color: #0f172a !important;
@@ -605,28 +444,24 @@ body.light-mode .price-title {
 body.light-mode .price-desc {
   color: #475569 !important;
 }
-body.light-mode .price-amount-wrapper {
-  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+body.light-mode .price-tag {
+  background: linear-gradient(135deg, rgba(124,58,237,0.06) 0%, rgba(168,85,247,0.04) 100%) !important;
+  border-color: rgba(124,58,237,0.2) !important;
 }
-body.light-mode .price-val {
-  color: #0f172a !important;
+body.light-mode .pricing-card:hover .price-tag {
+  border-color: rgba(124,58,237,0.35) !important;
 }
-body.light-mode .currency,
-body.light-mode .period {
-  color: #64748b !important;
+body.light-mode .price-tag-label {
+  color: var(--primary) !important;
 }
-body.light-mode .old-price {
-  color: #ef4444 !important;
+body.light-mode .btn-whatsapp {
+  background: rgba(37,211,102,0.08) !important;
+  color: #128c7e !important;
+  border-color: rgba(37,211,102,0.2) !important;
 }
-body.light-mode .discount-pill {
-  background: rgba(239, 68, 68, 0.1) !important;
-  color: #ef4444 !important;
-  border-color: rgba(239, 68, 68, 0.3) !important;
-}
-body.light-mode .savings-banner {
-  background: rgba(16, 185, 129, 0.1) !important;
-  border-color: rgba(16, 185, 129, 0.3) !important;
-  color: #059669 !important;
+body.light-mode .btn-whatsapp:hover {
+  background: rgba(37,211,102,0.15) !important;
+  border-color: rgba(37,211,102,0.35) !important;
 }
 body.light-mode .price-features li {
   color: #1e293b !important;
@@ -645,109 +480,6 @@ body.light-mode .price-features li.disabled i.fa-xmark {
 }
 body.light-mode .pricing-guarantee {
   color: #64748b !important;
-}
-
-/* --- 19. Testimonials / Carousel --- */
-.carousel-controls {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 1.5rem !important;
-  margin-top: 2rem !important;
-  position: relative !important;
-  z-index: 100 !important;
-}
-.carousel-btn {
-  width: 48px !important;
-  height: 48px !important;
-  min-width: 48px !important;
-  min-height: 48px !important;
-  border-radius: 50% !important;
-  font-size: 1.1rem !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: 100 !important;
-  transition: all 0.3s ease !important;
-}
-.carousel-btn {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  color: #ffffff !important;
-}
-.carousel-btn:hover {
-  background: var(--primary) !important;
-  border-color: var(--primary) !important;
-  box-shadow: var(--shadow-glow) !important;
-}
-body.light-mode .carousel-btn {
-  background: #ffffff !important;
-  border: 1.5px solid rgba(15, 23, 42, 0.15) !important;
-  color: #0f172a !important;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08) !important;
-}
-body.light-mode .carousel-btn:hover {
-  background: var(--primary) !important;
-  color: #ffffff !important;
-  border-color: var(--primary) !important;
-  box-shadow: 0 8px 25px var(--primary-glow) !important;
-}
-.carousel-dots {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.6rem !important;
-}
-.dot {
-  width: 10px !important;
-  height: 10px !important;
-  min-width: 10px !important;
-  min-height: 10px !important;
-  border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.25) !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  flex-shrink: 0 !important;
-  transform: translateZ(0) !important;
-  will-change: width, background-color, border-radius !important;
-  transition:
-    width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.3s ease,
-    border-radius 0.3s ease !important;
-}
-.dot.active {
-  width: 28px !important;
-  border-radius: 9999px !important;
-  background: var(--primary) !important;
-}
-body.light-mode .dot {
-  background: rgba(15, 23, 42, 0.2) !important;
-}
-body.light-mode .dot.active {
-  background: var(--primary) !important;
-}
-body.light-mode .testimonial-card {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06) !important;
-}
-body.light-mode .testimonial-card:hover {
-  border-color: var(--primary) !important;
-  box-shadow: 0 15px 35px -10px var(--primary-glow) !important;
-}
-body.light-mode .testimonial-text {
-  color: #0f172a !important;
-}
-body.light-mode .user-info h4 {
-  color: #0f172a !important;
-}
-body.light-mode .user-info p {
-  color: #64748b !important;
-}
-body.light-mode .quote-icon {
-  color: rgba(37, 99, 235, 0.2) !important;
 }
 
 /* --- 20. FAQ section --- */

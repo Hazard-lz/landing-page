@@ -22,8 +22,15 @@ var SITE_CONFIG = {
   // ==========================================================================
 
   theme: {
-    mode: '',
-    palette: {},
+    mode: 'dark',
+    palette: {
+      primary: '#7c3aed',
+      primaryText: '#a78bfa',
+      accent: '#a855f7',
+      gradPrimary: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
+      gradText: 'linear-gradient(135deg, #ffffff 30%, #d8b4fe 60%, #c084fc 100%)',
+      glow: 'rgba(124, 58, 237, 0.35)'
+    },
     fonts: {}
   },
 
@@ -38,7 +45,7 @@ var SITE_CONFIG = {
     facebook: '',
     youtube: '',
     github: 'https://github.com/Hazard-lz',
-    portfolio: 'https://hazard-lz.github.io/Portfolio/'
+    portfolio: 'https://hazard-lz.github.io/Portfolio/#projetos'
   },
 
   // ==========================================================================
@@ -83,6 +90,9 @@ var SITE_CONFIG = {
     },
     form: function(data) {
       return `*Novo Lead pelo Site*\n\nNome: ${data.name}\nE-mail: ${data.email}\nTelefone: ${data.phone}\nMensagem: ${data.message}`;
+    },
+    formAlert: function(message) {
+      return `${message}`;
     }
   },
 
@@ -91,11 +101,11 @@ var SITE_CONFIG = {
   // ==========================================================================
 
   form: {
-    method: 'whatsapp',
+    method: 'emailjs',
     emailjs: {
-      serviceId: 'YOUR_SERVICE_ID',
-      templateId: 'YOUR_TEMPLATE_ID',
-      userId: 'YOUR_USER_ID'
+      serviceId: 'service_ilji7rx',
+      templateId: 'template_dl17ocy',
+      userId: 'zTahZC9jxWvLfIaaj'
     },
     formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID'
   },
@@ -145,17 +155,15 @@ var SITE_CONFIG = {
   sections: {
     hero: true,
     beneficios: true,
-    importancia: true,
-    comparativo: true,
+    importancia: false,
     sobre: true,
     stats: false,
     servicos: true,
-    processo: true,
     portfolio: true,
     planos: true,
     depoimentos: false,
     faq: true,
-    orcamento: true,
+    orcamento: false,
     cta: true,
     contato: true
   },
@@ -196,7 +204,7 @@ var SITE_CONFIG = {
     {
       name: 'Site Institucional',
       icon: 'fa-globe',
-      description: 'Site completo para sua empresa com múltiplas páginas e presença profissional.',
+      description: 'Site completo para o seu negócio com múltiplas páginas e presença profissional.',
       monthly: 0,
       annual: 0,
       annualSavings: 0,
@@ -244,7 +252,7 @@ var SITE_CONFIG = {
     {
       icon: 'fa-globe',
       title: 'Sites Institucionais',
-      description: 'Site completo para sua empresa com múltiplas páginas, blog integrado e presença profissional na internet. Sua marca merece um site à altura.'
+      description: 'Site completo para o seu negócio com múltiplas páginas, blog integrado e presença profissional na internet. Sua marca merece um site à altura.'
     },
     {
       icon: 'fa-cart-shopping',

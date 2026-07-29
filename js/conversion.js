@@ -17,8 +17,8 @@ function initWhatsAppWidget() {
   const tooltip = waFloat.querySelector('.whatsapp-tooltip');
   if (tooltip) {
     tooltip.innerHTML = `
-      <strong>Quero um Site Como Este</strong>
-      <span>Falar no WhatsApp ${cfg.brand.phone}</span>
+      <strong>Fale Comigo</strong>
+      <span>${cfg.brand.phone}</span>
     `;
   }
 
@@ -70,60 +70,7 @@ function initWhatsAppWidget() {
   }, { once: true });
 }
 
-/* ─── 2. BUDGET CALCULATOR ──────────────────────────────────────────────── */
-function initBudgetCalculator() {
-  const cfg = window.SITE_CONFIG;
-  if (!cfg || !cfg.budgetCalculator) return;
-
-  const grid = document.getElementById('budget-grid');
-  const totalEl = document.querySelector('.budget-total-value');
-  const ctaBtn = document.querySelector('.budget-cta');
-  if (!grid || !totalEl || !ctaBtn) return;
-
-  const options = grid.querySelectorAll('.budget-option');
-
-  function formatCurrency(value) {
-    return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-  }
-
-  function updateTotal() {
-    let total = 0;
-    options.forEach(opt => {
-      if (opt.getAttribute('data-checked') === 'true') {
-        total += parseFloat(opt.getAttribute('data-price'));
-      }
-    });
-    totalEl.textContent = formatCurrency(total);
-    ctaBtn.disabled = total === 0;
-  }
-
-  options.forEach(opt => {
-    opt.addEventListener('click', function() {
-      const isChecked = this.getAttribute('data-checked') === 'true';
-      this.setAttribute('data-checked', isChecked ? 'false' : 'true');
-      this.classList.toggle('checked', !isChecked);
-      updateTotal();
-    });
-  });
-
-  ctaBtn.addEventListener('click', () => {
-    const selected = [];
-    options.forEach(opt => {
-      if (opt.getAttribute('data-checked') === 'true') {
-        selected.push(opt.querySelector('.budget-label').textContent.trim());
-      }
-    });
-    if (selected.length === 0) return;
-    const msg = encodeURIComponent(cfg.whatsappMessages.budget(selected));
-    const link = document.createElement('a');
-    link.href = `${cfg.social.whatsapp}?text=${msg}`;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.click();
-  });
-}
-
-/* ─── 3. UNIFIED ANALYTICS TRACKING ─────────────────────────────────────── */
+/* ─── 2. UNIFIED ANALYTICS TRACKING ─────────────────────────────────────── */
 function initAnalytics() {
   const cfg = window.SITE_CONFIG;
   if (!cfg || !cfg.analytics || cfg.analytics.enabled === false) return;

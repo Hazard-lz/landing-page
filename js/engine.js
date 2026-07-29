@@ -77,7 +77,7 @@
 
     // Número no tooltip
     const tooltipSpan = qs('.whatsapp-tooltip span');
-    if (tooltipSpan) setText(tooltipSpan, `Falar no WhatsApp ${cfg.brand.phone}`);
+    if (tooltipSpan) setText(tooltipSpan, `${cfg.brand.phone}`);
 
     // Info de contato
     const contactPhone = qsa('.contact-info .info-text p');
@@ -85,6 +85,30 @@
       if (el.closest('.info-item') && el.closest('.info-item').querySelector('.fa-phone')) {
         setText(el, `+55 ${cfg.brand.phoneRaw.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')}`);
       }
+    });
+
+    // Portfolio CTA
+    const portfolioCta = qs('.portfolio-cta');
+    if (portfolioCta && cfg.social.portfolio) {
+      setHref(portfolioCta, cfg.social.portfolio);
+    }
+
+    // Todos os botões "Solicitar Orçamento" com #contato (exceto nav/footer)
+    qsa('a[href="#contato"]').forEach(el => {
+      if (el.closest('.nav-menu') || el.closest('.footer-links')) return;
+      const card = el.closest('.service-card');
+      const pricingCard = el.closest('.pricing-card');
+      let msg = defaultMsg;
+      if (card) {
+        const serviceName = card.querySelector('h3')?.textContent?.trim();
+        if (serviceName && cfg.whatsappMessages.service)
+          msg = encodeURIComponent(cfg.whatsappMessages.service(serviceName));
+      } else if (pricingCard) {
+        const planName = pricingCard.querySelector('.price-title')?.textContent?.trim();
+        if (planName && cfg.whatsappMessages.plan)
+          msg = encodeURIComponent(cfg.whatsappMessages.plan(planName));
+      }
+      setHref(el, waUrl + '?text=' + msg);
     });
   }
 
@@ -297,8 +321,10 @@
   function injectSocialProof() {
     const proofText = qs('.proof-info p');
     if (proofText) {
-      const count = cfg.stats[0] ? cfg.stats[0].count : 500;
-      setHTML(proofText, `<strong>+${count} ${cfg.stats[0].label || 'Atendimentos'}</strong> realizados`);
+      const count = cfg.stats[0] ? cfg.stats[0].count : 0;
+      if (count > 0) {
+        setHTML(proofText, `<strong>+${count} ${cfg.stats[0].label || 'Atendimentos'}</strong> realizados`);
+      }
     }
   }
 
@@ -307,10 +333,9 @@
   function injectAbout() {
     const aboutSection = qs('#sobre');
     if (!aboutSection) return;
-    const expCard = aboutSection.querySelector('.about-experience-card .exp-num');
-    if (expCard && cfg.brand.foundedYear) {
-      const years = new Date().getFullYear() - cfg.brand.foundedYear;
-      setText(expCard, `+${years}`);
+    const aboutYear = aboutSection.querySelector('.about-year');
+    if (aboutYear && cfg.brand.foundedYear) {
+      setText(aboutYear, cfg.brand.foundedYear);
     }
   }
 
