@@ -63,9 +63,9 @@ var SITE_CONFIG = {
     ogLocale: 'pt_BR',
     ogSiteName: 'Leonardo Gomes',
     ogImage: 'assets/images/hero-graphic-og.png',
-    canonicalUrl: 'https://hazard-lz.github.io/landing-page',
+    canonicalUrl: 'https://leonardo-gomes.vercel.app',
     robotsEnabled: true,
-    sitemapUrl: 'https://hazard-lz.github.io/landing-page/sitemap.xml',
+    sitemapUrl: 'https://leonardo-gomes.vercel.app/sitemap.xml',
     twitterCard: 'summary_large_image',
     twitterSite: '',
     twitterCreator: '',
@@ -115,9 +115,9 @@ var SITE_CONFIG = {
   // ==========================================================================
 
   analytics: {
-    enabled: false,
+    enabled: true,
     googleTagManagerId: '',
-    googleAnalyticsId: '',
+    googleAnalyticsId: 'G-DDLFV265C6',
     metaPixelId: '',
     googleAdsConversionId: ''
   },
@@ -125,8 +125,8 @@ var SITE_CONFIG = {
   whatsAppPopup: {
     enabled: true,
     delay: 15000,
-    title: 'Vamos Criar Seu Site?',
-    description: 'Solicite um orçamento personalizado sem compromisso!',
+    title: 'Precisa de um Site?',
+    description: 'Me chame no WhatsApp e faço uma proposta personalizada para seu projeto!',
     buttonText: 'Falar Agora'
   },
 
@@ -167,17 +167,6 @@ var SITE_CONFIG = {
     cta: true,
     contato: true
   },
-
-  // ==========================================================================
-  // ESTATÍSTICAS (desativadas por enquanto)
-  // ==========================================================================
-
-  stats: [
-    { count: 0, prefix: '', suffix: '', label: 'Projetos Realizados' },
-    { count: 0, prefix: '', suffix: '%', label: 'Satisfação' },
-    { count: 2025, prefix: '', suffix: '', label: 'Desde' },
-    { count: 24, prefix: '', suffix: '/7', label: 'Dedicação Total' }
-  ],
 
   // ==========================================================================
   // PLANOS / TIPOS DE PROJETO
@@ -261,7 +250,7 @@ var SITE_CONFIG = {
     },
     {
       icon: 'fa-gears',
-      title: 'Sistemas & Apps',
+      title: 'Sistemas Web',
       description: 'Sistemas web personalizados, dashboards, painéis administrativos e aplicações sob medida para automatizar e escalar seu negócio.'
     },
     {
@@ -301,19 +290,6 @@ var SITE_CONFIG = {
       question: 'Como solicito um orçamento?',
       answer: 'Clique no WhatsApp em qualquer lugar da página ou preencha o formulário de contato. Me conte sobre seu projeto e te respondo em minutos com uma proposta personalizada.'
     }
-  ],
-
-  // ==========================================================================
-  // PORTFOLIO
-  // ==========================================================================
-
-  portfolio: [
-    { image: 'assets/images/portfolio-1.svg', category: 'landing', tag: 'Landing Page', title: 'Landing Page de Alta Conversão', description: 'Exemplo de página única com design moderno e foco em conversão.' },
-    { image: 'assets/images/portfolio-2.svg', category: 'institucional', tag: 'Site Institucional', title: 'Site Empresarial Completo', description: 'Site profissional com múltiplas páginas e blog integrado.' },
-    { image: 'assets/images/portfolio-3.svg', category: 'ecommerce', tag: 'E-commerce', title: 'Loja Virtual Responsiva', description: 'E-commerce completo com catálogo, carrinho e pagamentos.' },
-    { image: 'assets/images/portfolio-4.svg', category: 'landing', tag: 'Landing Page', title: 'Página de Vendas', description: 'Landing page focada em conversão com SEO integrado.' },
-    { image: 'assets/images/portfolio-5.svg', category: 'institucional', tag: 'Site Institucional', title: 'Site para Prestador de Serviços', description: 'Site profissional com portfólio, depoimentos e contato direto.' },
-    { image: 'assets/images/portfolio-6.svg', category: 'sistema', tag: 'Sistema Web', title: 'Painel Administrativo', description: 'Sistema personalizado com dashboard e gestão de dados.' }
   ],
 
   // ==========================================================================
