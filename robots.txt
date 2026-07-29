@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /obrigado
 
-Sitemap: /sitemap.xml
+Sitemap: https://hazard-lz.github.io/landing-page/sitemap.xml

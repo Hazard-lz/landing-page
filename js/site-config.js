@@ -1,28 +1,24 @@
 var SITE_CONFIG = {
   // ==========================================================================
-  // DADOS DA EMPRESA / CLIENTE
-  // Edite apenas este arquivo para personalizar o site inteiro.
+  // DADOS DO DESENVOLVEDOR
   // ==========================================================================
 
   brand: {
-    name: 'Sua Empresa',
-    nameHtml: 'SUA<strong class="brand-accent">EMPRESA</strong>',
-    tagline: 'Solução Perfeita Para o Seu Negócio',
-    description: 'Oferecemos soluções modernas e personalizadas para alavancar o seu negócio na internet.',
+    name: 'Leonardo Gomes',
+    nameHtml: 'LEONARDO<strong class="brand-accent">GOMES</strong>',
+    tagline: 'Sites e Sistemas Sob Medida',
+    description: 'Criação de sites profissionais, landing pages e sistemas personalizados. Transforme sua ideia em um projeto digital pronto para o mercado.',
     phone: '(11) 93437-6059',
     phoneRaw: '5511934376059',
     email: 'leogb1200@gmail.com',
-    address: 'Av. Principal do Seu Bairro, 1000 - Cidade / UF',
-    hours: 'Segunda a Sexta: 08h às 18h | Sábado: 08h às 12h',
-    foundedYear: 2016,
-    employees: 12
+    address: 'Atendimento 100% Online em todo o Brasil',
+    hours: 'Seg a Sex: 08h às 18h | Sáb: 08h às 12h | Plantão WhatsApp',
+    foundedYear: 2025,
+    employees: 1
   },
 
   // ==========================================================================
-  // TEMA (CORES, MODO CLARO/ESCURO E FONTES)
-  // Preencha para fixar a identidade visual do cliente.
-  // Deixe palette vazio {} para usar o Niche Switcher interativo.
-  // mode: '' (permite alternar), 'dark' (fixo), 'light' (fixo)
+  // TEMA
   // ==========================================================================
 
   theme: {
@@ -51,18 +47,18 @@ var SITE_CONFIG = {
 
   seo: {
     enabled: true,
-    title: 'Modelo Demonstrativo | Template de Landing Page de Alta Conversão',
-    description: 'Demonstração interativa de Landing Page profissional. Exemplo de estrutura moderna, responsiva e de alta conversão adaptável a qualquer empresa.',
-    keywords: 'landing page demonstrativa, template de site, modelo de site, site para empresa, alta conversão, modelo responsivo',
-    ogTitle: 'Modelo Demonstrativo | Template de Landing Page',
-    ogDescription: 'Veja como o site da sua empresa pode ficar com este modelo moderno, ultra rápido e responsivo.',
+    title: 'Leonardo Gomes | Criação de Sites e Sistemas Sob Medida',
+    description: 'Crio landing pages, sites institucionais, e-commerces e sistemas personalizados. Atendimento online em todo o Brasil. Solicite seu orçamento.',
+    keywords: 'criação de sites, landing pages, desenvolvimento web, sistemas personalizados, sites profissionais, ecommerce, seo, performance web, hazardlz, leonardo gomes',
+    ogTitle: 'Leonardo Gomes | Desenvolvimento Web',
+    ogDescription: 'Sites profissionais, landing pages de alta conversão e sistemas personalizados para o seu negócio.',
     ogType: 'website',
     ogLocale: 'pt_BR',
-    ogSiteName: 'Sua Empresa',
+    ogSiteName: 'Leonardo Gomes',
     ogImage: 'assets/images/hero-graphic-og.png',
-    canonicalUrl: 'https://landing-page-template-hazardlg.vercel.app',
+    canonicalUrl: 'https://hazard-lz.github.io/landing-page',
     robotsEnabled: true,
-    sitemapUrl: 'https://landing-page-template-hazardlg.vercel.app/sitemap.xml',
+    sitemapUrl: 'https://hazard-lz.github.io/landing-page/sitemap.xml',
     twitterCard: 'summary_large_image',
     twitterSite: '',
     twitterCreator: '',
@@ -74,16 +70,16 @@ var SITE_CONFIG = {
   // ==========================================================================
 
   whatsappMessages: {
-    default: 'Olá! Estive vendo a demonstração da landing page e gostaria de solicitar um orçamento para o site da minha empresa!',
+    default: 'Olá! Vi seu portfólio e gostaria de solicitar um orçamento para um projeto.',
     plan: function(planName) {
-      return `Olá! Tenho interesse no plano ${planName} e gostaria de mais informações.`;
+      return `Olá! Tenho interesse no projeto ${planName} e gostaria de mais informações.`;
     },
     service: function(serviceName) {
       return `Olá! Gostaria de saber mais sobre o serviço: ${serviceName}.`;
     },
     budget: function(items) {
       const summary = items.map(i => `- ${i}`).join('\n');
-      return `Olá! Gostaria de solicitar um orçamento com base nas seguintes opções:\n\n${summary}\n\nPode me enviar uma proposta?`;
+      return `Olá! Montei meu orçamento com as seguintes opções:\n\n${summary}\n\nPodemos conversar sobre os valores?`;
     },
     form: function(data) {
       return `*Novo Lead pelo Site*\n\nNome: ${data.name}\nE-mail: ${data.email}\nTelefone: ${data.phone}\nMensagem: ${data.message}`;
@@ -92,7 +88,6 @@ var SITE_CONFIG = {
 
   // ==========================================================================
   // FORMULÁRIO DE CONTATO
-  // Escolha o método de envio: 'whatsapp' | 'emailjs' | 'formspree'
   // ==========================================================================
 
   form: {
@@ -106,7 +101,7 @@ var SITE_CONFIG = {
   },
 
   // ==========================================================================
-  // ANALYTICS & TRACKING
+  // ANALYTICS
   // ==========================================================================
 
   analytics: {
@@ -119,19 +114,19 @@ var SITE_CONFIG = {
 
   whatsAppPopup: {
     enabled: true,
-    delay: 20000,
-    title: 'Olá! Precisa de um site?',
-    description: 'Posso ajudar com um orçamento personalizado para o seu negócio!',
+    delay: 15000,
+    title: 'Vamos Criar Seu Site?',
+    description: 'Solicite um orçamento personalizado sem compromisso!',
     buttonText: 'Falar Agora'
   },
 
   // ==========================================================================
-  // OTIMIZAÇÃO DE PERFORMANCE
+  // PERFORMANCE
   // ==========================================================================
 
   performance: {
     enabled: true,
-    preloader: true,       // false = desabilita o preloader completamente (inclusive na troca de temas)
+    preloader: true,
     lazyLoadImages: true,
     deferScripts: true,
     preconnectOrigins: [
@@ -144,7 +139,7 @@ var SITE_CONFIG = {
   },
 
   // ==========================================================================
-  // SEÇÕES ATIVAS (true = exibir, false = ocultar)
+  // SEÇÕES ATIVAS
   // ==========================================================================
 
   sections: {
@@ -153,84 +148,86 @@ var SITE_CONFIG = {
     importancia: true,
     comparativo: true,
     sobre: true,
-    stats: true,
+    stats: false,
     servicos: true,
     processo: true,
     portfolio: true,
     planos: true,
-    depoimentos: true,
+    depoimentos: false,
     faq: true,
-    orcamento: false,
+    orcamento: true,
     cta: true,
     contato: true
   },
 
   // ==========================================================================
-  // NÚMEROS E ESTATÍSTICAS (para a seção de contadores)
+  // ESTATÍSTICAS (desativadas por enquanto)
   // ==========================================================================
 
   stats: [
-    { count: 500, prefix: '+', suffix: '', label: 'Clientes Atendidos' },
-    { count: 99, prefix: '', suffix: '%', label: 'Satisfação Garantida' },
-    { count: 10, prefix: '', suffix: ' Anos', label: 'Anos no Mercado' },
-    { count: 24, prefix: '', suffix: '/7', label: 'Suporte e Prontidão' }
+    { count: 0, prefix: '', suffix: '', label: 'Projetos Realizados' },
+    { count: 0, prefix: '', suffix: '%', label: 'Satisfação' },
+    { count: 2025, prefix: '', suffix: '', label: 'Desde' },
+    { count: 24, prefix: '', suffix: '/7', label: 'Dedicação Total' }
   ],
 
   // ==========================================================================
-  // PLANOS / PREÇOS
+  // PLANOS / TIPOS DE PROJETO
   // ==========================================================================
 
   plans: [
     {
-      name: 'Plano Básico',
-      icon: 'fa-paper-plane',
-      description: 'Ideal para atendimentos individuais e serviços essenciais.',
-      monthly: 199,
-      annual: 159,
-      annualSavings: 480,
+      name: 'Landing Page',
+      icon: 'fa-file-lines',
+      description: 'Página única e impactante para campanhas, promoções ou captação de leads.',
+      monthly: 0,
+      annual: 0,
+      annualSavings: 0,
       popular: false,
       features: [
-        { text: 'Atendimento em Horário Comercial', included: true },
-        { text: 'Suporte via WhatsApp & E-mail', included: true },
-        { text: 'Acesso aos Serviços Fundamentais', included: true },
-        { text: 'Atendimento Prioritário VIP', included: false },
-        { text: 'Descontos Exclusivos em Serviços', included: false }
+        { text: 'Design responsivo e moderno', included: true },
+        { text: 'Integração com WhatsApp', included: true },
+        { text: 'Formulário de captação de leads', included: true },
+        { text: 'Otimização de performance', included: true },
+        { text: 'Hospedagem + Domínio (opcional)', included: false }
       ],
-      cta: 'Escolher Básico'
+      cta: 'Solicitar Orçamento'
     },
     {
-      name: 'Plano Completo',
-      icon: 'fa-rocket',
-      description: 'A escolha perfeita para quem busca o máximo de benefícios.',
-      monthly: 399,
-      annual: 319,
-      annualSavings: 960,
+      name: 'Site Institucional',
+      icon: 'fa-globe',
+      description: 'Site completo para sua empresa com múltiplas páginas e presença profissional.',
+      monthly: 0,
+      annual: 0,
+      annualSavings: 0,
       popular: true,
       features: [
-        { text: 'Tudo do Plano Básico', included: true },
-        { text: 'Atendimento Prioritário VIP', included: true },
-        { text: 'Avaliações e Acompanhamento Mensal', included: true },
-        { text: 'Descontos Exclusivos em Serviços', included: true },
-        { text: 'Agendamento Flexível 7 dias/semana', included: true }
+        { text: 'Até 5 páginas personalizadas', included: true },
+        { text: 'Design responsivo e moderno', included: true },
+        { text: 'Integração com WhatsApp', included: true },
+        { text: 'Blog integrado', included: true },
+        { text: 'Otimização SEO básica', included: true },
+        { text: 'Hospedagem + Domínio (opcional)', included: false }
       ],
-      cta: 'Escolher Completo'
+      cta: 'Solicitar Orçamento'
     },
     {
-      name: 'Plano VIP',
-      icon: 'fa-crown',
-      description: 'Solução personalizada para empresas e contratações de grande porte.',
-      monthly: 799,
-      annual: 639,
-      annualSavings: 1920,
+      name: 'E-commerce / Sistema',
+      icon: 'fa-cart-shopping',
+      description: 'Loja virtual completa ou sistema web personalizado para seu negócio.',
+      monthly: 0,
+      annual: 0,
+      annualSavings: 0,
       popular: false,
       features: [
-        { text: 'Atendimento Exclusivo 24/7', included: true },
-        { text: 'Consultor Dedicado', included: true },
-        { text: 'Garantias Estendidas e Relatórios', included: true },
-        { text: 'Descontos Máximos em Novos Projetos', included: true },
-        { text: 'Prioridade Máxima na Fila', included: true }
+        { text: 'Funcionalidades sob medida', included: true },
+        { text: 'Painel administrativo', included: true },
+        { text: 'Integrações personalizadas', included: true },
+        { text: 'Otimização SEO avançada', included: true },
+        { text: 'Suporte e manutenção inclusos', included: true },
+        { text: 'Hospedagem + Domínio (opcional)', included: false }
       ],
-      cta: 'Escolher VIP'
+      cta: 'Solicitar Orçamento'
     }
   ],
 
@@ -240,117 +237,93 @@ var SITE_CONFIG = {
 
   services: [
     {
-      icon: 'fa-award',
-      title: 'Serviço 1 - Atendimento Especializado',
-      description: 'Descreva aqui o primeiro serviço principal oferecido pela sua empresa, destacando os maiores benefícios para o cliente.'
+      icon: 'fa-file-lines',
+      title: 'Landing Pages',
+      description: 'Páginas de alta conversão para campanhas, promoções e captação de leads. Design moderno, carregamento ultrarrápido e foco em resultado.'
     },
     {
-      icon: 'fa-sliders',
-      title: 'Serviço 2 - Soluções Sob Medida',
-      description: 'Apresente tratamentos, projetos ou produtos personalizados de acordo com a necessidade específica de cada cliente.'
+      icon: 'fa-globe',
+      title: 'Sites Institucionais',
+      description: 'Site completo para sua empresa com múltiplas páginas, blog integrado e presença profissional na internet. Sua marca merece um site à altura.'
     },
     {
-      icon: 'fa-clock',
-      title: 'Serviço 3 - Atendimento Prioritário',
-      description: 'Destaque a agilidade no atendimento, pontualidade de entrega e suporte dedicado que sua empresa oferece.'
+      icon: 'fa-cart-shopping',
+      title: 'E-commerce',
+      description: 'Lojas virtuais completas para vender online. Catálogo de produtos, carrinho de compras, pagamentos integrados e gestão de pedidos.'
     },
     {
-      icon: 'fa-gem',
-      title: 'Serviço 4 - Linha Premium',
-      description: 'Exiba seus produtos de alto padrão ou pacotes exclusivos voltados a clientes que buscam a máxima qualidade.'
+      icon: 'fa-gears',
+      title: 'Sistemas & Apps',
+      description: 'Sistemas web personalizados, dashboards, painéis administrativos e aplicações sob medida para automatizar e escalar seu negócio.'
     },
     {
-      icon: 'fa-handshake',
-      title: 'Serviço 5 - Pacotes Corporativos',
-      description: 'Mostre opções preparadas para atender empresas, grupos ou contratações de maior volume.'
+      icon: 'fa-magnifying-glass-chart',
+      title: 'Otimização SEO',
+      description: 'Seu site preparado para rankear no Google. Metatags, estrutura semântica, dados estruturados e práticas de SEO on-page.'
     },
     {
-      icon: 'fa-comments',
-      title: 'Serviço 6 - Avaliação Gratuita',
-      description: 'Ofereça um diagnóstico inicial ou orçamento sem compromisso para atrair novos contatos no seu site.'
+      icon: 'fa-bolt',
+      title: 'Performance Web',
+      description: 'Otimização de velocidade, Core Web Vitals, lazy loading e técnicas avançadas para seu site carregar em menos de 1 segundo.'
     }
   ],
 
   // ==========================================================================
-  // PERGUNTAS FREQUENTES (FAQ)
+  // FAQ
   // ==========================================================================
 
   faq: [
     {
-      question: 'Como faço para agendar um horário ou orçamento?',
-      answer: 'Você pode clicar em qualquer botão de WhatsApp nesta página ou preencher o formulário no final do site. Nossa equipe responderá em minutos!'
+      question: 'Quanto custa criar um site?',
+      answer: 'Cada projeto é único. O valor depende da complexidade, número de páginas e funcionalidades. Me chame no WhatsApp com os detalhes do seu projeto que te envio uma proposta personalizada sem compromisso.'
     },
     {
-      question: 'Quais são as formas de pagamento aceitas?',
-      answer: 'Aceitamos Pix, cartões de crédito em até 12x, boleto bancário e transferência. Oferecemos condições especiais para pagamento à vista.'
+      question: 'Quanto tempo leva para ficar pronto?',
+      answer: 'Landing pages ficam prontas em 3-7 dias. Sites institucionais em 7-15 dias. Projetos mais complexos como e-commerce ou sistemas sob medida têm prazos alinhados durante o orçamento.'
     },
     {
-      question: 'Onde fica localizada a empresa / onde os serviços são prestados?',
-      answer: 'Realizamos atendimentos presenciais em nossa sede bem como atendimento online / entregas em todo o Brasil dependendo do seu nicho.'
+      question: 'Você oferece hospedagem e domínio?',
+      answer: 'Sim, posso incluir hospedagem e domínio no seu projeto. Trabalho com as melhores plataformas para garantir performance e segurança.'
     },
     {
-      question: 'Quais são os horários de atendimento?',
-      answer: 'Nosso atendimento funciona de Segunda a Sexta, das 08h às 18h, e aos Sábados das 09h às 13h via WhatsApp.'
+      question: 'E depois que o site ficar pronto?',
+      answer: 'Ofereço planos de manutenção mensal para manter seu site sempre atualizado, seguro e com suporte contínuo. Perfeito se você não quer se preocupar com nada técnico.'
+    },
+    {
+      question: 'Como solicito um orçamento?',
+      answer: 'Clique no WhatsApp em qualquer lugar da página ou preencha o formulário de contato. Me conte sobre seu projeto e te respondo em minutos com uma proposta personalizada.'
     }
   ],
 
   // ==========================================================================
-  // DEPOIMENTOS
-  // ==========================================================================
-
-  testimonials: [
-    {
-      text: 'Excelente atendimento! O profissionalismo e a agilidade da equipe superaram todas as minhas expectativas. Recomendo de olhos fechados!',
-      name: 'Mariana Silva',
-      role: 'Cliente Satisfeita',
-      avatar: 'assets/images/avatar-1.svg',
-      rating: 5
-    },
-    {
-      text: 'Qualidade impecável do produto e atenção em cada detalhe. Com certeza voltarei a contratar os serviços no futuro!',
-      name: 'Fernanda Oliveira',
-      role: 'Cliente Frequente',
-      avatar: 'assets/images/avatar-2.svg',
-      rating: 5
-    },
-    {
-      text: 'Transparência, pontualidade e resultado acima do esperado. Sem dúvidas a melhor escolha da região!',
-      name: 'Lucas Santos',
-      role: 'Cliente Corporativo',
-      avatar: 'assets/images/avatar-3.svg',
-      rating: 5
-    }
-  ],
-
-  // ==========================================================================
-  // PORTFOLIO / GALERIA
+  // PORTFOLIO
   // ==========================================================================
 
   portfolio: [
-    { image: 'assets/images/portfolio-1.svg', category: 'saas', tag: 'Categoria 1', title: 'Exemplo de Trabalho Realizado', description: 'Descrição curta demonstrando o resultado obtido pelo cliente.' },
-    { image: 'assets/images/portfolio-2.svg', category: 'design', tag: 'Categoria 2', title: 'Projeto de Alto Padrão', description: 'Foto detalhada do produto ou espaço da empresa.' },
-    { image: 'assets/images/portfolio-3.svg', category: 'ecommerce', tag: 'Categoria 3', title: 'Transformação & Resultado', description: 'Registro visual do serviço concluído com sucesso.' },
-    { image: 'assets/images/portfolio-4.svg', category: 'branding', tag: 'Categoria 1', title: 'Linha de Produtos Exclusiva', description: 'Demonstração visual do catálogo disponível para o cliente.' },
-    { image: 'assets/images/portfolio-5.svg', category: 'saas', tag: 'Categoria 2', title: 'Atendimento Especializado', description: 'Exemplo de projeto entregue com máxima pontualidade.' },
-    { image: 'assets/images/portfolio-6.svg', category: 'design', tag: 'Categoria 3', title: 'Especialidade da Casa', description: 'Destaque do principal diferencial competitivo do negócio.' }
+    { image: 'assets/images/portfolio-1.svg', category: 'landing', tag: 'Landing Page', title: 'Landing Page de Alta Conversão', description: 'Exemplo de página única com design moderno e foco em conversão.' },
+    { image: 'assets/images/portfolio-2.svg', category: 'institucional', tag: 'Site Institucional', title: 'Site Empresarial Completo', description: 'Site profissional com múltiplas páginas e blog integrado.' },
+    { image: 'assets/images/portfolio-3.svg', category: 'ecommerce', tag: 'E-commerce', title: 'Loja Virtual Responsiva', description: 'E-commerce completo com catálogo, carrinho e pagamentos.' },
+    { image: 'assets/images/portfolio-4.svg', category: 'landing', tag: 'Landing Page', title: 'Página de Vendas', description: 'Landing page focada em conversão com SEO integrado.' },
+    { image: 'assets/images/portfolio-5.svg', category: 'institucional', tag: 'Site Institucional', title: 'Site para Prestador de Serviços', description: 'Site profissional com portfólio, depoimentos e contato direto.' },
+    { image: 'assets/images/portfolio-6.svg', category: 'sistema', tag: 'Sistema Web', title: 'Painel Administrativo', description: 'Sistema personalizado com dashboard e gestão de dados.' }
   ],
 
   // ==========================================================================
-  // CALCULADORA DE ORÇAMENTO 
+  // CALCULADORA DE ORÇAMENTO
   // ==========================================================================
 
   budgetCalculator: {
-    title: 'Monte o Seu Orçamento',
-    description: 'Selecione os recursos que você precisa e receba uma proposta personalizada no WhatsApp.',
+    title: 'Monte Seu Orçamento',
+    description: 'Selecione os recursos que você precisa. Os valores são referência — o preço final combinamos no WhatsApp.',
     options: [
-      { id: 'landing', label: 'Landing Page', price: 497, icon: 'fa-file-lines' },
-      { id: 'speed', label: 'Otimização de Velocidade', price: 197, icon: 'fa-bolt' },
-      { id: 'seo', label: 'Otimização SEO', price: 297, icon: 'fa-magnifying-glass-chart' },
+      { id: 'landing', label: 'Landing Page', price: 597, icon: 'fa-file-lines' },
+      { id: 'institutional', label: 'Site Institucional', price: 1297, icon: 'fa-globe' },
+      { id: 'ecommerce', label: 'E-commerce', price: 2497, icon: 'fa-cart-shopping' },
+      { id: 'system', label: 'Sistema Personalizado', price: 3997, icon: 'fa-gears' },
+      { id: 'seo', label: 'Pacote SEO', price: 297, icon: 'fa-magnifying-glass-chart' },
+      { id: 'speed', label: 'Otimização de Performance', price: 197, icon: 'fa-bolt' },
       { id: 'whatsapp', label: 'Integração com WhatsApp', price: 147, icon: 'fa-brands fa-whatsapp' },
-      { id: 'analytics', label: 'GA4 + Meta Pixel', price: 197, icon: 'fa-chart-simple' },
-      { id: 'blog', label: 'Blog Integrado', price: 397, icon: 'fa-newspaper' },
-      { id: 'cms', label: 'Painel CMS (editar conteúdo)', price: 597, icon: 'fa-gears' },
-      { id: 'hosting', label: 'Hospedagem + Domínio (1 ano)', price: 360, icon: 'fa-server' }
+      { id: 'maintenance', label: 'Manutenção Mensal', price: 97, icon: 'fa-screwdriver-wrench' }
     ],
     cta: 'Solicitar Proposta no WhatsApp'
   }

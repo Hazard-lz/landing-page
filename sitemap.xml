@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://landing-page-template-hazardlg.vercel.app/</loc>
+    <loc>https://hazard-lz.github.io/landing-page/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://landing-page-template-hazardlg.vercel.app/obrigado</loc>
+    <loc>https://hazard-lz.github.io/landing-page/obrigado</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://landing-page-template-hazardlg.vercel.app/politica-de-privacidade</loc>
+    <loc>https://hazard-lz.github.io/landing-page/politica-de-privacidade</loc>
     <priority>0.3</priority>
   </url>
 </urlset>
