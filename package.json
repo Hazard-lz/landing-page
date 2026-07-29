@@ -1,0 +1,13 @@
+{
+  "name": "landing-page-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing Page Template de Alta Conversão",
+  "scripts": {
+    "build": "node -e \"const fs=require('fs');['site-config','engine','performance','theme-switcher','animations','components','conversion','script'].forEach(f=>fs.appendFileSync('js/_combined.js',fs.readFileSync('js/'+f+'.js','utf8')+'\\n'));require('child_process').execSync('esbuild --minify --outfile=js/bundle.js js/_combined.js',{shell:true});fs.unlinkSync('js/_combined.js');console.log('OK:',fs.statSync('js/bundle.js').size,'bytes')\"",
+    "build:check": "node -e \"new Function(require('fs').readFileSync('js/bundle.js','utf8'));console.log('Bundle OK')\""
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

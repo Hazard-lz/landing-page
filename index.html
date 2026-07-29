@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo Demonstrativo | Template de Landing Page de Alta Conversão</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Demonstração interativa de Landing Page profissional. Exemplo de estrutura moderna, responsiva e de alta conversão adaptável a qualquer empresa.">
+  <meta name="keywords" content="landing page demonstrativa, template de site, modelo de site, site para empresa, alta conversão, modelo responsivo">
+  <meta name="author" content="Template Demonstrativo">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Modelo Demonstrativo | Template de Landing Page">
+  <meta property="og:description" content="Veja como o site da sua empresa pode ficar com este modelo moderno, ultra rápido e responsivo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://landing-page-template-hazardlg.vercel.app/assets/images/hero-graphic-og.png">
+  <script>!function(){var o=window.location.origin;function m(p,c){var e=document.querySelector('meta['+p+'="'+c+'"]');if(e){var u=e.getAttribute('content');if(u.indexOf(o)<0)u=o+u.substring(u.indexOf('/',u.indexOf('://')+3));e.setAttribute('content',u)}}m('property','og:image');m('name','twitter:image')}();</script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter (async non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+  <!-- FontAwesome 6 Icons (self-hosted, no third-party cookies) -->
+  <link rel="preload" as="style" href="assets/fontawesome/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/fontawesome/all.min.css"></noscript>
+
+  <!-- CSS Design System (inline critical — mantenha sincronizado com css/variables.css, components.css e sections.css) -->
+  <style>
+    :root{--primary:#2563eb;--primary-hover:#1d4ed8;--primary-glow:rgba(37,99,235,0.35);--primary-text:#60a5fa;--accent:#0ea5e9;--accent-hover:#0284c7;--accent-glow:rgba(14,165,233,0.35);--grad-primary:linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%);--grad-primary-hover:linear-gradient(135deg,#1d4ed8 0%,#0284c7 100%);--grad-text:linear-gradient(135deg,#ffffff 30%,#93c5fd 60%,#38bdf8 100%);--grad-dark-card:linear-gradient(145deg,rgba(255,255,255,0.05)0%,rgba(255,255,255,0.01)100%);--grad-glow:radial-gradient(circle,rgba(37,99,235,0.18)0%,rgba(14,165,233,0.1)50%,transparent 70%);--bg-dark:#0b0f19;--bg-darker:#060911;--bg-card:rgba(17,24,39,0.7);--bg-card-hover:rgba(31,41,55,0.8);--border-light:rgba(255,255,255,0.08);--border-active:rgba(37,99,235,0.5);--font-family:'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif;--text-main:#f9fafb;--text-muted:#9ca3af;--text-dim:#6b7280;--radius-sm:8px;--radius-md:14px;--radius-lg:24px;--radius-full:9999px;--shadow-sm:0 4px 6px -1px rgba(0,0,0,0.3);--shadow-md:0 10px 25px -5px rgba(0,0,0,0.4),0 8px 10px -6px rgba(0,0,0,0.3);--shadow-lg:0 20px 40px -15px rgba(0,0,0,0.6);--shadow-glow:0 0 30px rgba(37,99,235,0.3);--transit-fast:0.2s cubic-bezier(0.4,0,0.2,1);--transit-normal:0.35s cubic-bezier(0.4,0,0.2,1);--transit-slow:0.6s cubic-bezier(0.16,1,0.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;max-width:100%;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;max-width:100vw}body{background-color:var(--bg-dark);color:var(--text-main);font-family:var(--font-family);line-height:1.6;overflow-x:hidden;position:relative;width:100%;max-width:100vw}a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}img,svg{max-width:100%;height:auto;display:block}body.light-mode{background-color:#f8fafc!important;color:#0f172a!important;--bg-dark:#f8fafc;--bg-darker:#f1f5f9;--bg-card:#fff;--bg-card-hover:#f8fafc;--border-light:rgba(15,23,42,0.09);--border-color:rgba(15,23,42,0.12);--border-active:rgba(37,99,235,0.45);--text-main:#0f172a;--text-muted:#475569;--text-dim:#64748b;--primary-text:#1e40af;--grad-text:linear-gradient(135deg,#0f172a 20%,#2563eb 100%);--shadow-sm:0 2px 8px rgba(15,23,42,0.06);--shadow-md:0 8px 24px rgba(15,23,42,0.08);--shadow-lg:0 20px 50px rgba(15,23,42,0.1)}body.light-mode #preloader{background:#f8fafc!important}body.light-mode .navbar{background:rgba(255,255,255,0.85)!important;backdrop-filter:blur(20px)!important}body.light-mode .navbar.scrolled{background:rgba(255,255,255,0.96)!important;border-bottom:1px solid rgba(15,23,42,0.08)!important}body.light-mode .nav-link{color:#475569!important}body.light-mode .nav-link:hover,body.light-mode .nav-link.active{color:var(--primary)!important}body.light-mode .hamburger span{background:#0f172a!important}body.light-mode .hero{background:radial-gradient(circle at 50% 0%,rgba(37,99,235,0.06)0%,transparent 60%)!important}body.light-mode .hero h1{color:#0f172a!important}body.light-mode .hero p{color:#475569!important}body.light-mode .typing-text{background:var(--grad-primary)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}body.light-mode .hero-social-proof{border-top-color:rgba(15,23,42,0.1)!important}body.light-mode .avatar-group img{border-color:#fff!important}body.light-mode .proof-info p{color:#0f172a!important}body.light-mode .hero-image-wrapper{background:#fff!important;border-color:rgba(15,23,42,0.1)!important}body.light-mode .floating-badge{background:#fff!important;border-color:rgba(15,23,42,0.1)!important}.badge{background:color-mix(in srgb,var(--primary) 15%,transparent)!important;color:#fff!important;border-color:color-mix(in srgb,var(--primary) 50%,transparent)!important}.badge i{color:var(--primary)!important}body.light-mode .badge{background:color-mix(in srgb,var(--primary) 8%,transparent)!important;color:var(--primary)!important;border-color:color-mix(in srgb,var(--primary) 30%,transparent)!important}body.light-mode .badge i{color:var(--primary)!important}body.light-mode .section-title{color:#0f172a!important}body.light-mode .section-subtitle{color:#475569!important}body.light-mode .text-gradient{background:var(--grad-primary)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+  #preloader{position:fixed;inset:0;background:var(--bg-darker);z-index:99999;display:none;flex-direction:column;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}#preloader.active{display:flex}#preloader.fade-out{opacity:0;visibility:hidden}.loader-logo{font-size:1.8rem;font-weight:800;display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem}.loader-logo i{color:var(--primary);filter:drop-shadow(0 0 10px var(--primary))}.loader-bar{width:200px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--radius-full);overflow:hidden;position:relative}.loader-progress{width:0%;height:100%;background:var(--grad-primary);border-radius:var(--radius-full);transition:width .3s ease}#scroll-progress{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--grad-primary);z-index:10000;transition:width .1s linear;box-shadow:0 0 10px var(--primary);will-change:width}.navbar{position:fixed;top:0;left:0;width:100%;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;z-index:1000;transition:padding .3s ease,background-color .3s ease,border-color .3s ease,box-shadow .3s ease;will-change:padding,background-color}.navbar.scrolled{background:rgba(11,15,25,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:.85rem 2rem;border-bottom:1px solid var(--border-light);box-shadow:var(--shadow-sm)}.nav-brand{display:flex;align-items:center;gap:.6rem;font-size:1.25rem;font-weight:800;letter-spacing:-.5px;color:var(--text-main);flex-shrink:0}.nav-brand .logo-icon{width:36px;height:36px;background:var(--grad-primary);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;box-shadow:var(--shadow-glow)}.brand-accent{color:var(--primary);transition:color .3s ease}.nav-menu{display:flex;align-items:center;gap:1.35rem;list-style:none}.mobile-cta-wrapper,.mobile-menu-header{display:none!important}.nav-link{font-size:.825rem;font-weight:600;color:var(--text-muted);transition:color var(--transit-fast);position:relative;white-space:nowrap}.nav-link:hover,.nav-link.active{color:var(--text-main)}.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0%;height:2px;background:var(--grad-primary);transition:width var(--transit-fast);border-radius:2px}.nav-link:hover::after,.nav-link.active::after{width:100%}.nav-actions{display:flex;align-items:center;gap:1rem;flex-shrink:0}.theme-mode-toggle{width:42px;height:42px;border-radius:var(--radius-full);background:var(--bg-card);border:1px solid var(--border-color);color:var(--text-main);font-size:1.15rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--transit-normal);-webkit-tap-highlight-color:transparent!important}.hamburger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:transparent;border:none;cursor:pointer;z-index:1001}.hamburger span{width:100%;height:2.5px;background:var(--text-main);border-radius:2px;transition:all .3s ease}.hamburger.active span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1.8rem;border-radius:var(--radius-md);font-size:.95rem;font-weight:600;text-decoration:none;transition:transform var(--transit-normal),box-shadow var(--transit-normal),background var(--transit-normal);overflow:hidden;text-align:center}.btn-primary{background:var(--grad-primary);color:#fff;box-shadow:0 4px 20px var(--primary-glow)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--primary-glow)}.btn-secondary{background:rgba(255,255,255,.05);color:var(--text-main);border:1px solid var(--border-light);backdrop-filter:blur(10px)}.btn-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);transform:translateY(-2px)}body.light-mode .navbar{background:rgba(255,255,255,.85)!important;backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important}body.light-mode .navbar.scrolled{background:rgba(255,255,255,.96)!important;border-bottom:1px solid rgba(15,23,42,.08)!important;box-shadow:0 4px 20px rgba(15,23,42,.06)!important}body.light-mode .nav-brand{color:#0f172a!important}body.light-mode .nav-link{color:#475569!important}body.light-mode .nav-link:hover,body.light-mode .nav-link.active{color:var(--primary)!important}body.light-mode .hamburger span{background:#0f172a!important}body.light-mode .btn-primary{background:var(--grad-primary)!important;color:#fff!important;box-shadow:0 4px 20px var(--primary-glow)!important}body.light-mode .btn-secondary{background:#fff!important;color:var(--primary)!important;border:1px solid var(--primary)!important;backdrop-filter:none!important}body.light-mode .btn-secondary:hover{background:var(--primary)!important;color:#fff!important}
+  .hero{min-height:100vh;padding-top:9rem;padding-bottom:5rem;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem}.hero-content{display:flex;flex-direction:column;align-items:flex-start}.hero h1{font-size:3.5rem;font-weight:800;line-height:1.2;letter-spacing:-1.5px;margin-bottom:1.5rem;min-height:8.5rem}.typing-wrapper{display:inline-block;min-width:7em;min-height:1.15em;vertical-align:bottom;text-align:left}#typing-text{display:inline;white-space:nowrap}.typing-text::after{content:'|';display:inline-block;color:var(--primary);margin-left:3px;font-weight:500;animation:blink 0.75s infinite;-webkit-text-fill-color:var(--primary);filter:drop-shadow(0 0 8px var(--primary))}@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}.hero p{color:var(--text-muted);font-size:1.2rem;margin-bottom:2.25rem;max-width:540px}.hero-buttons{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:3rem}.hero-social-proof{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--border-light);width:100%}.avatar-group{display:flex}.avatar-group img{width:40px;height:40px;border-radius:50%;border:2px solid var(--bg-dark);margin-left:-12px}.avatar-group img:first-child{margin-left:0}.proof-info p{margin:0;font-size:0.9rem;font-weight:600;color:var(--text-main)}.proof-info span{font-size:0.8rem;color:var(--text-muted)}.hero-demo-notice{font-size:0.775rem;color:var(--primary-text);background:rgba(37,99,235,0.08);border:1px dashed var(--primary-glow);border-radius:var(--radius-md);padding:0.45rem 0.85rem;margin-top:0.85rem;display:inline-flex;align-items:center;gap:0.5rem;line-height:1.4}.hero-demo-notice i{font-size:0.95rem;flex-shrink:0}.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}.hero-image-wrapper{position:relative;width:100%;max-width:500px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow-lg),var(--shadow-glow);transform-style:preserve-3d;will-change:transform}.hero-image-wrapper img{width:100%;height:auto;display:block}.floating-badge{position:absolute;padding:0.9rem 1.4rem;background:rgba(17,24,39,0.85);border:1px solid var(--border-light);backdrop-filter:blur(12px);border-radius:var(--radius-md);box-shadow:var(--shadow-md);display:flex;align-items:center;gap:0.8rem;z-index:5;animation:float 4s ease-in-out infinite}.floating-badge.badge-1{top:10%;left:-20px;animation-delay:0s}.floating-badge.badge-2{bottom:12%;right:-20px;animation-delay:2s}.floating-badge .icon-box{width:36px;height:36px;background:var(--grad-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}.floating-badge .badge-title{font-size:0.85rem;font-weight:700}.floating-badge .badge-sub{font-size:0.75rem;color:var(--text-muted)}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.scroll-indicator{position:absolute;bottom:0.25rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.8rem;cursor:pointer;transition:color var(--transit-fast)}.scroll-indicator:hover{color:var(--text-main)}section{position:relative;padding:6rem 1.5rem;max-width:1280px;margin:0 auto;z-index:2}.section-header{text-align:center;max-width:700px;margin:0 auto 4rem}.btn-lg{padding:1.1rem 2.2rem;font-size:1.05rem;border-radius:var(--radius-md)}.btn-shine::before{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transform:skewX(-20deg);transition:left 0.75s ease}.btn-shine:hover::before{left:150%}.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.4);transform:scale(0);animation:ripple-anim 0.6s linear;pointer-events:none}@keyframes ripple-anim{to{transform:scale(4);opacity:0}}
+  </style>
+  <link rel="preload" as="style" href="css/components.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="css/sections.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="css/themes.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/sections.css"><link rel="stylesheet" href="css/themes.css"></noscript>
+
+  <!-- Preload hero image (LCP candidate) -->
+  <link rel="preload" as="image" href="assets/images/hero-graphic.svg">
+  <script>(function(){try{var s=localStorage.getItem('demo_niche_theme'),T={tech:{primary:'#2563eb',accent:'#0ea5e9',gradPrimary:'linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%)',gradText:'linear-gradient(135deg,#ffffff 30%,#93c5fd 60%,#38bdf8 100%)',glow:'rgba(37,99,235,0.35)',primaryText:'#60a5fa'},health:{primary:'#10b981',accent:'#06b6d4',gradPrimary:'linear-gradient(135deg,#10b981 0%,#06b6d4 100%)',gradText:'linear-gradient(135deg,#ffffff 30%,#a7f3d0 60%,#34d399 100%)',glow:'rgba(16,185,129,0.35)',primaryText:'#34d399'},beauty:{primary:'#7c3aed',accent:'#a855f7',gradPrimary:'linear-gradient(135deg,#7c3aed 0%,#a855f7 100%)',gradText:'linear-gradient(135deg,#ffffff 30%,#d8b4fe 60%,#c084fc 100%)',glow:'rgba(124,58,237,0.35)',primaryText:'#a78bfa'},gourmet:{primary:'#ef4444',accent:'#f43f5e',gradPrimary:'linear-gradient(135deg,#ef4444 0%,#f43f5e 100%)',gradText:'linear-gradient(135deg,#ffffff 30%,#fecdd3 60%,#f87171 100%)',glow:'rgba(239,68,68,0.35)',primaryText:'#f87171'},fitness:{primary:'#06b6d4',accent:'#3b82f6',gradPrimary:'linear-gradient(135deg,#06b6d4 0%,#3b82f6 100%)',gradText:'linear-gradient(135deg,#ffffff 30%,#bae6fd 60%,#38bdf8 100%)',glow:'rgba(6,182,212,0.35)',primaryText:'#22d3ee'},law:{primary:'#eab308',accent:'#ca8a04',gradPrimary:'linear-gradient(135deg,#eab308 0%,#ca8a04 100%)',gradText:'linear-gradient(135deg,#ffffff 30%,#fef08a 60%,#eab308 100%)',glow:'rgba(234,179,8,0.35)',primaryText:'#facc15'}},t=s&&T[s];if(t){var r=document.documentElement;r.style.setProperty('--primary',t.primary);r.style.setProperty('--primary-text',t.primaryText);r.style.setProperty('--accent',t.accent);r.style.setProperty('--grad-primary',t.gradPrimary);r.style.setProperty('--grad-text',t.gradText);r.style.setProperty('--primary-glow',t.glow)}}catch(e){}})();</script>
+</head>
+<body>
+<script>(function(){try{if(localStorage.getItem('theme-mode')==='light'||(!localStorage.getItem('theme-mode')&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches))document.body.classList.add('light-mode')}catch(e){}})();</script>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="loader-logo">
+      <i class="fa-solid fa-cube"></i>
+      <span class="nav-brand-text">SUA<strong class="brand-accent">EMPRESA</strong></span>
+    </div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- CANVAS BACKGROUND PARTICLES -->
+  <!-- CANVAS & OVERLAY BACKDROP -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#" class="nav-brand">
+      <div class="logo-icon">
+        <i class="fa-solid fa-cube"></i>
+      </div>
+      <span class="nav-brand-text">SUA<strong class="brand-accent">EMPRESA</strong></span>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="mobile-menu-header">
+        <span class="mobile-menu-title">Navegação</span>
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fechar Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </li>
+      <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+      <li><a href="#importancia" class="nav-link">Importância</a></li>
+      <li><a href="#comparativo" class="nav-link">Comparativo</a></li>
+      <li><a href="#sobre" class="nav-link">Sobre</a></li>
+      <li><a href="#servicos" class="nav-link">Serviços</a></li>
+      <li><a href="#processo" class="nav-link">Processo</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+      <li><a href="#planos" class="nav-link">Planos</a></li>
+      <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#orcamento" class="nav-link">Orçamento</a></li>
+      <li><a href="#contato" class="nav-link">Contato</a></li>
+      <li class="mobile-cta-wrapper">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-shine mobile-cta-btn">
+          <span>Falar no WhatsApp</span>
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-mode-toggle" id="theme-mode-toggle" aria-label="Alternar Modo Escuro/Claro">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-shine nav-desktop-cta" data-magnetic>
+        <span>Falar Conosco</span>
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <button class="hamburger" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="badge reveal">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>Modelo de Site Demonstrativo</span>
+        </div>
+
+        <h1 class="reveal reveal-up">
+          A Solução Perfeita Para <br>
+          <span class="typing-wrapper">
+            <span class="text-gradient typing-text" id="typing-text" data-words='["o Seu Negócio", "a Sua Clínica", "o Seu Restaurante", "o Seu Escritório", "a Sua Empresa"]'>o Seu Negócio</span>
+          </span>
+        </h1>
+
+        <p class="reveal reveal-up">
+          Esta é uma demonstração de como o site da sua empresa pode se parecer. Design moderno, ultra rápido, 100% responsivo e construído para converter visitantes em clientes.
+        </p>
+
+        <div class="hero-buttons reveal reveal-up">
+          <a href="#contato" class="btn btn-primary btn-lg btn-shine" data-magnetic>
+            <span>Agendar Atendimento</span>
+            <i class="fa-solid fa-calendar-check"></i>
+          </a>
+          <a href="#beneficios" class="btn btn-secondary btn-lg" data-magnetic>
+            <i class="fa-solid fa-circle-play"></i>
+            <span>Explorar Recursos</span>
+          </a>
+        </div>
+
+        <div class="hero-social-proof reveal">
+          <div class="avatar-group">
+            <img src="assets/images/avatar-1.svg" alt="Cliente 1">
+            <img src="assets/images/avatar-2.svg" alt="Cliente 2">
+            <img src="assets/images/avatar-3.svg" alt="Cliente 3">
+          </div>
+          <div class="proof-info">
+            <p><strong>+500 Atendimentos</strong> realizados</p>
+            <span><i class="fa-solid fa-star" style="color:#f59e0b;"></i> 5.0 (Avaliação máxima dos clientes no Google)</span>
+          </div>
+        </div>
+
+        <div class="pricing-demo-notice reveal" style="margin: 0.85rem 0 0 0;">
+          <i class="fa-solid fa-circle-info"></i>
+          <span><strong>Nota de Demonstração:</strong> Exemplo de como exibiremos a reputação do seu negócio no Google.</span>
+        </div>
+      </div>
+
+      <!-- HERO VISUAL & FLOATING BADGES -->
+      <div class="hero-visual reveal reveal-right">
+        <div class="hero-image-wrapper" data-tilt>
+          <img src="assets/images/hero-graphic.svg" alt="Demonstração do Painel do Cliente" width="500" height="375" fetchpriority="high">
+        </div>
+
+        <div class="floating-badge badge-1">
+          <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+          <div>
+            <div class="badge-title">+300% Vendas</div>
+            <div class="badge-sub">Média de crescimento</div>
+          </div>
+        </div>
+
+        <div class="floating-badge badge-2">
+          <div class="icon-box" style="background: var(--accent);"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <div class="badge-title">100% Otimizado</div>
+            <div class="badge-sub">Perfeito em celulares</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#beneficios" class="scroll-indicator" aria-label="Rolar para explorar">
+        <span>Rolar para explorar</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section id="beneficios">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-layer-group"></i> Diferenciais</div>
+        <h2 class="section-title">O que o <span class="text-gradient" id="brand-headline">Seu Site</span> Terá</h2>
+        <p class="section-subtitle">Uma estrutura completa projetada para transmitir autoridade imediata aos seus clientes.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal reveal-up">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>Carregamento Instantâneo</h3>
+          <p>Seu cliente não espera. Página otimizada para carregar em menos de 1 segundo em qualquer conexão móvel.</p>
+        </div>
+
+        <div class="benefit-card reveal reveal-up" style="transition-delay: 0.1s;">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3>Design Visual Premium</h3>
+          <p>Estética moderna com efeitos visuais, gradientes elegantes e acabamento profissional de alto nível.</p>
+        </div>
+
+        <div class="benefit-card reveal reveal-up" style="transition-delay: 0.2s;">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <h3>Customização Total</h3>
+          <p>Cores, imagens, logotipos e textos 100% adaptáveis para a identidade visual exata do seu negócio.</p>
+        </div>
+
+        <div class="benefit-card reveal reveal-up" style="transition-delay: 0.3s;">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3>Integração com WhatsApp</h3>
+          <p>Botões de chamada direta para o seu WhatsApp corporativo facilitando o contato instantâneo do cliente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPORTANCE OF A WEBSITE SECTION (SHOWCASE FEATURE) -->
+    <section class="importance-section" id="importancia">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-chart-line"></i> Por Que Ter Um Site?</div>
+        <h2 class="section-title">A Importância de um Site Profissional <span class="text-gradient">Para o Seu Negócio</span></h2>
+        <p class="section-subtitle">Entenda por que ter um site moderno é indispensável para gerar autoridade, atrair clientes e aumentar suas vendas.</p>
+      </div>
+
+      <div class="importance-grid">
+        <div class="importance-card reveal reveal-up">
+          <div class="importance-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Presença 24h no Ar</h3>
+          <p>Sua empresa aberta 24 horas por dia, 7 dias por semana, pronta para receber clientes e apresentar soluções a qualquer momento.</p>
+        </div>
+
+        <div class="importance-card reveal reveal-up" style="transition-delay: 0.1s;">
+          <div class="importance-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Credibilidade & Confiança</h3>
+          <p>Mais de 80% dos consumidores pesquisam no Google antes de contratar. Um site transmite segurança imediata ao seu público.</p>
+        </div>
+
+        <div class="importance-card reveal reveal-up" style="transition-delay: 0.2s;">
+          <div class="importance-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3>Captação Automática</h3>
+          <p>Botões de WhatsApp e formulários estratégicos que direcionam contatos qualificados direto para a sua equipe de vendas.</p>
+        </div>
+
+        <div class="importance-card reveal reveal-up" style="transition-delay: 0.3s;">
+          <div class="importance-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h3>Destaque da Concorrência</h3>
+          <p>Saia na frente de concorrentes que dependem apenas de redes sociais. Um site próprio garante controle total sobre sua marca.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON SECTION (SEM SITE VS COM SITE PROFISSIONAL) -->
+    <section class="comparison-section" id="comparativo">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-scale-balanced"></i> Comparativo Real</div>
+        <h2 class="section-title">Sem Site Profissional <span class="text-gradient">vs. Com Site Próprio</span></h2>
+        <p class="section-subtitle">Veja a diferença na prática entre depender de redes sociais e ter a sua própria estrutura profissional na internet.</p>
+      </div>
+
+      <div class="comparison-grid reveal">
+        <!-- Coluna Sem Site -->
+        <div class="comparison-card bad">
+          <div class="comparison-card-header">
+            <div class="comparison-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div>
+              <h3>Sem Site (Apenas Redes Sociais)</h3>
+              <p class="comparison-tag bad-tag">Estrutura Limitada</p>
+            </div>
+          </div>
+          <ul class="comparison-list">
+            <li><i class="fa-solid fa-xmark"></i> Depende 100% dos algoritmos para suas postagens aparecerem</li>
+            <li><i class="fa-solid fa-xmark"></i> Perde clientes que pesquisam por soluções no Google todos os dias</li>
+            <li><i class="fa-solid fa-xmark"></i> Informações desorganizadas e difíceis de encontrar rapidamente</li>
+            <li><i class="fa-solid fa-xmark"></i> Sem canal automático de captação fora do horário comercial</li>
+            <li><i class="fa-solid fa-xmark"></i> Transmite percepção amadora em relação aos concorrentes</li>
+          </ul>
+        </div>
+
+        <!-- Coluna Com Site Profissional -->
+        <div class="comparison-card good">
+          <div class="popular-ribbon"><i class="fa-solid fa-star"></i> Recomendado</div>
+          <div class="comparison-card-header">
+            <div class="comparison-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div>
+              <h3>Com Site Profissional Próprio</h3>
+              <p class="comparison-tag good-tag">Estrutura de Alta Conversão</p>
+            </div>
+          </div>
+          <ul class="comparison-list">
+            <li><i class="fa-solid fa-check"></i> Presença 24h no Google pronta para quem busca seu serviço</li>
+            <li><i class="fa-solid fa-check"></i> Autoridade e credibilidade imediata ao primeiro clique do cliente</li>
+            <li><i class="fa-solid fa-check"></i> Informações, fotos, preços e horários organizados em 1 só lugar</li>
+            <li><i class="fa-solid fa-check"></i> Botões estratégicos enviando pedidos direto para seu WhatsApp</li>
+            <li><i class="fa-solid fa-check"></i> Controle total da sua marca, sem depender das regras das redes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre">
+      <div class="about-grid">
+        <div class="about-image-container reveal reveal-left">
+          <div class="about-image" data-tilt>
+            <img src="assets/images/about-graphic.svg" alt="Sobre a Sua Empresa">
+          </div>
+          <div class="about-experience-card">
+            <div class="exp-num">+10</div>
+            <div class="exp-text">Anos de Tradição</div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-right">
+          <div class="badge"><i class="fa-solid fa-building"></i> Sobre a Empresa</div>
+          <h2>Apresente a História e os Valores da <span class="text-gradient">Sua Marca</span></h2>
+          <p>
+            Nesta seção, você contará a trajetória da sua empresa, apresentando seus diferenciais competitivos, compromisso com a qualidade e por que os clientes devem confiar em seus serviços.
+          </p>
+
+          <ul class="advantages-list">
+            <li><i class="fa-solid fa-check"></i> Destaque a experiência e tradição do seu negócio no mercado</li>
+            <li><i class="fa-solid fa-check"></i> Apresente sua equipe qualificada e infraestrutura moderna</li>
+            <li><i class="fa-solid fa-check"></i> Mostre garantias, selos de qualidade e certificações</li>
+            <li><i class="fa-solid fa-check"></i> Transmita segurança e credibilidade para fechar mais vendas</li>
+          </ul>
+
+          <a href="#contato" class="btn btn-primary btn-shine" data-magnetic>
+            <span>Falar com um Atendente</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section id="stats" class="stats-section">
+      <div class="pricing-demo-notice reveal" style="max-width: 800px; margin: 0 auto 2.5rem auto;">
+        <i class="fa-solid fa-circle-info"></i>
+        <span><strong>Nota de Demonstração:</strong> Estes números e estatísticas são um exemplo de como apresentaremos as conquistas, anos de mercado e métricas da <em>sua empresa</em>.</span>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-number" data-count="500" data-prefix="+">+0</div>
+          <div class="stat-label">Clientes Atendidos</div>
+        </div>
+
+        <div class="stat-card reveal" style="transition-delay: 0.1s;">
+          <div class="stat-number" data-count="99" data-suffix="%">0%</div>
+          <div class="stat-label">Satisfação Garantida</div>
+        </div>
+
+        <div class="stat-card reveal" style="transition-delay: 0.2s;">
+          <div class="stat-number" data-count="10" data-suffix=" Anos">0</div>
+          <div class="stat-label">Anos no Mercado</div>
+        </div>
+
+        <div class="stat-card reveal" style="transition-delay: 0.3s;">
+          <div class="stat-number" data-count="24" data-suffix="/7">0</div>
+          <div class="stat-label">Suporte e Prontidão</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicos">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-cubes"></i> Seus Serviços</div>
+        <h2 class="section-title">Exiba Suas Soluções de Forma <span class="text-gradient">Clara e Atraente</span></h2>
+        <p class="section-subtitle">Exemplo de grade para apresentar os principais serviços ou produtos oferecidos pelo seu negócio.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal reveal-up">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-award"></i></div>
+            <h3>Serviço 1 - Atendimento Especializado</h3>
+            <p>Descreva aqui o primeiro serviço principal oferecido pela sua empresa, destacando os maiores benefícios para o cliente.</p>
+          </div>
+          <a href="#contato" class="service-link">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal reveal-up" style="transition-delay: 0.1s;">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-sliders"></i></div>
+            <h3>Serviço 2 - Soluções Sob Medida</h3>
+            <p>Apresente tratamentos, projetos ou produtos personalizados de acordo com a necessidade específica de cada cliente.</p>
+          </div>
+          <a href="#contato" class="service-link">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal reveal-up" style="transition-delay: 0.2s;">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-clock"></i></div>
+            <h3>Serviço 3 - Atendimento Prioritário</h3>
+            <p>Destaque a agilidade no atendimento, pontualidade de entrega e suporte dedicado que sua empresa oferece.</p>
+          </div>
+          <a href="#contato" class="service-link">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal reveal-up">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-gem"></i></div>
+            <h3>Serviço 4 - Linha Premium</h3>
+            <p>Exiba seus produtos de alto padrão ou pacotes exclusivos voltados a clientes que buscam a máxima qualidade.</p>
+          </div>
+          <a href="#contato" class="service-link">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal reveal-up" style="transition-delay: 0.1s;">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Serviço 5 - Pacotes Corporativos</h3>
+            <p>Mostre opções preparadas para atender empresas, grupos ou contratações de maior volume.</p>
+          </div>
+          <a href="#contato" class="service-link">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal reveal-up" style="transition-delay: 0.2s;">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-comments"></i></div>
+            <h3>Serviço 6 - Avaliação Gratuita</h3>
+            <p>Ofereça um diagnóstico inicial ou orçamento sem compromisso para atrair novos contatos no seu site.</p>
+          </div>
+          <a href="#contato" class="service-link">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="processo">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-timeline"></i> Como Funciona</div>
+        <h2 class="section-title">A Jornada Simples do <span class="text-gradient">Seu Cliente</span></h2>
+        <p class="section-subtitle">Mostre o passo a passo claro para que o cliente saiba exatamente como contratar você.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-step reveal">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Contato Inicial</h3>
+            <p>O cliente envia uma mensagem rápida via WhatsApp ou preenche o formulário do site.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal" style="transition-delay: 0.15s;">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3>Diagnóstico</h3>
+            <p>Sua equipe entende o desejo do cliente e apresenta a melhor solução ou orçamento.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal" style="transition-delay: 0.3s;">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Atendimento</h3>
+            <p>Execução do serviço ou entrega do produto com padrão de excelência garantido.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal" style="transition-delay: 0.45s;">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Fidelização</h3>
+            <p>Acompanhamento pós-atendimento para garantir a total satisfação do seu cliente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-briefcase"></i> Galeria de Trabalhos</div>
+        <h2 class="section-title">Mostre Seus Projetos e <span class="text-gradient">Resultados</span></h2>
+        <p class="section-subtitle">Seus clientes poderão navegar por fotos e detalhes dos seus melhores trabalhos nesta galeria interativa.</p>
+      </div>
+
+      <div class="portfolio-filter reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="saas">Projetos</button>
+        <button class="filter-btn" data-filter="design">Produtos</button>
+        <button class="filter-btn" data-filter="ecommerce">Resultados</button>
+        <button class="filter-btn" data-filter="branding">Galeria</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal" data-category="saas">
+          <img src="assets/images/portfolio-1.svg" alt="Exemplo de Projeto 1" class="portfolio-thumb">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Categoria 1</span>
+            <h3 class="portfolio-title">Exemplo de Trabalho Realizado</h3>
+            <p class="portfolio-desc">Descrição curta demonstrando o resultado obtido pelo cliente.</p>
+            <button class="btn btn-primary btn-sm portfolio-btn">Ampliar Foto</button>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-category="design" style="transition-delay: 0.1s;">
+          <img src="assets/images/portfolio-2.svg" alt="Exemplo de Projeto 2" class="portfolio-thumb">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Categoria 2</span>
+            <h3 class="portfolio-title">Projeto de Alto Padrão</h3>
+            <p class="portfolio-desc">Foto detalhada do produto ou espaço da empresa.</p>
+            <button class="btn btn-primary btn-sm portfolio-btn">Ampliar Foto</button>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-category="ecommerce" style="transition-delay: 0.2s;">
+          <img src="assets/images/portfolio-3.svg" alt="Exemplo de Projeto 3" class="portfolio-thumb">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Categoria 3</span>
+            <h3 class="portfolio-title">Transformação & Resultado</h3>
+            <p class="portfolio-desc">Registro visual do serviço concluído com sucesso.</p>
+            <button class="btn btn-primary btn-sm portfolio-btn">Ampliar Foto</button>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-category="branding">
+          <img src="assets/images/portfolio-4.svg" alt="Exemplo de Projeto 4" class="portfolio-thumb">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Categoria 1</span>
+            <h3 class="portfolio-title">Linha de Produtos Exclusiva</h3>
+            <p class="portfolio-desc">Demonstração visual do catálogo disponível para o cliente.</p>
+            <button class="btn btn-primary btn-sm portfolio-btn">Ampliar Foto</button>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-category="saas" style="transition-delay: 0.1s;">
+          <img src="assets/images/portfolio-5.svg" alt="Exemplo de Projeto 5" class="portfolio-thumb">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Categoria 2</span>
+            <h3 class="portfolio-title">Atendimento Especializado</h3>
+            <p class="portfolio-desc">Exemplo de projeto entregue com máxima pontualidade.</p>
+            <button class="btn btn-primary btn-sm portfolio-btn">Ampliar Foto</button>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-category="design" style="transition-delay: 0.2s;">
+          <img src="assets/images/portfolio-6.svg" alt="Exemplo de Projeto 6" class="portfolio-thumb">
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Categoria 3</span>
+            <h3 class="portfolio-title">Especialidade da Casa</h3>
+            <p class="portfolio-desc">Destaque do principal diferencial competitivo do negócio.</p>
+            <button class="btn btn-primary btn-sm portfolio-btn">Ampliar Foto</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Fechar modal"><i class="fa-solid fa-xmark"></i></button>
+        <img src="" alt="Ampliação do Projeto" class="lightbox-img">
+        <div class="lightbox-details">
+          <h3 class="lightbox-title" style="margin-bottom: 0.5rem;">Título do Projeto</h3>
+          <p class="lightbox-desc" style="color: var(--text-muted);">Descrição completa do trabalho exibido em alta resolução.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING & PLANS SECTION (SHOWCASE FEATURE) -->
+    <section id="planos">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-tag"></i> Tabela de Preços</div>
+        <h2 class="section-title">Seus Planos & <span class="text-gradient">Opções de Pacotes</span></h2>
+        <p class="section-subtitle">Exemplo de como apresentar os valores ou pacotes de serviços oferecidos pela sua empresa para os seus clientes.</p>
+      </div>
+
+      <div class="pricing-demo-notice reveal">
+        <i class="fa-solid fa-circle-info"></i>
+        <span><strong>Nota de Demonstração:</strong> Esta seção ilustra como a tabela de preços, pacotes e serviços da <em>sua empresa</em> pode ser apresentada aos <em>seus clientes</em>.</span>
+      </div>
+
+      <div class="pricing-toggle-wrapper reveal" id="toggle-container">
+        <span class="pricing-label active" id="label-monthly">Mensal</span>
+        <div class="pricing-toggle" id="pricing-toggle" role="switch" aria-label="Alternar Faturamento" aria-checked="false" tabindex="0"></div>
+        <span class="pricing-label" id="label-annual">Anual</span>
+        <span class="discount-badge-label"><i class="fa-solid fa-bolt"></i> -20% OFF</span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1 -->
+        <div class="pricing-card reveal reveal-up">
+          <div>
+            <div class="price-icon-box">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <h3 class="price-title">Plano Básico</h3>
+            <p class="price-desc">Ideal para atendimentos individuais e serviços essenciais.</p>
+            
+            <div class="price-amount-wrapper">
+              <div class="price-old-wrapper">
+                <span class="old-price">R$ 199/mês</span>
+                <span class="discount-pill">-20% OFF</span>
+              </div>
+              <div class="price-amount">
+                <span class="currency">R$</span>
+                <span class="price-val" data-monthly="199" data-annual="159">199</span>
+                <span class="period">/mês</span>
+              </div>
+              <div class="savings-banner">
+                <i class="fa-solid fa-piggy-bank"></i> Economize <strong>R$ 480</strong> por ano
+              </div>
+            </div>
+
+            <ul class="price-features">
+              <li><i class="fa-solid fa-check"></i> Atendimento em Horário Comercial</li>
+              <li><i class="fa-solid fa-check"></i> Suporte via WhatsApp & E-mail</li>
+              <li><i class="fa-solid fa-check"></i> Acesso aos Serviços Fundamentais</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Atendimento Prioritário VIP</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Descontos Exclusivos em Serviços</li>
+            </ul>
+          </div>
+          <a href="#contato" class="btn btn-secondary" style="width: 100%;">Escolher Básico</a>
+        </div>
+
+        <!-- Plan 2 (Popular) -->
+        <div class="pricing-card popular reveal reveal-up" style="transition-delay: 0.15s;">
+          <div class="popular-badge">Mais Escolhido</div>
+          <div>
+            <div class="price-icon-box">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3 class="price-title">Plano Completo</h3>
+            <p class="price-desc">A escolha perfeita para quem busca o máximo de benefícios e resultados.</p>
+            
+            <div class="price-amount-wrapper">
+              <div class="price-old-wrapper">
+                <span class="old-price">R$ 399/mês</span>
+                <span class="discount-pill">-20% OFF</span>
+              </div>
+              <div class="price-amount">
+                <span class="currency">R$</span>
+                <span class="price-val" data-monthly="399" data-annual="319">399</span>
+                <span class="period">/mês</span>
+              </div>
+              <div class="savings-banner">
+                <i class="fa-solid fa-piggy-bank"></i> Economize <strong>R$ 960</strong> por ano
+              </div>
+            </div>
+
+            <ul class="price-features">
+              <li><i class="fa-solid fa-check"></i> Tudo do Plano Básico</li>
+              <li><i class="fa-solid fa-check"></i> Atendimento Prioritário VIP</li>
+              <li><i class="fa-solid fa-check"></i> Avaliações e Acompanhamento Mensal</li>
+              <li><i class="fa-solid fa-check"></i> Descontos Exclusivos em Serviços</li>
+              <li><i class="fa-solid fa-check"></i> Agendamento Flexível 7 dias/semana</li>
+            </ul>
+          </div>
+          <a href="#contato" class="btn btn-primary btn-shine" style="width: 100%;">Escolher Completo</a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="pricing-card reveal reveal-up" style="transition-delay: 0.3s;">
+          <div>
+            <div class="price-icon-box">
+              <i class="fa-solid fa-crown"></i>
+            </div>
+            <h3 class="price-title">Plano VIP</h3>
+            <p class="price-desc">Solução personalizada para empresas e contratações de grande porte.</p>
+            
+            <div class="price-amount-wrapper">
+              <div class="price-old-wrapper">
+                <span class="old-price">R$ 799/mês</span>
+                <span class="discount-pill">-20% OFF</span>
+              </div>
+              <div class="price-amount">
+                <span class="currency">R$</span>
+                <span class="price-val" data-monthly="799" data-annual="639">799</span>
+                <span class="period">/mês</span>
+              </div>
+              <div class="savings-banner">
+                <i class="fa-solid fa-piggy-bank"></i> Economize <strong>R$ 1.920</strong> por ano
+              </div>
+            </div>
+
+            <ul class="price-features">
+              <li><i class="fa-solid fa-check"></i> Atendimento Exclusivo 24/7</li>
+              <li><i class="fa-solid fa-check"></i> Consultor Dedicado</li>
+              <li><i class="fa-solid fa-check"></i> Garantias Estendidas e Relatórios</li>
+              <li><i class="fa-solid fa-check"></i> Descontos Máximos em Novos Projetos</li>
+              <li><i class="fa-solid fa-check"></i> Prioridade Máxima na Fila</li>
+            </ul>
+          </div>
+          <a href="#contato" class="btn btn-secondary" style="width: 100%;">Escolher VIP</a>
+        </div>
+      </div>
+
+      <div class="pricing-guarantee reveal">
+        <span><i class="fa-solid fa-shield-halved"></i> Sem fidelidade nem multa</span>
+        <span><i class="fa-solid fa-rotate-left"></i> Cancele quando quiser</span>
+        <span><i class="fa-solid fa-circle-check"></i> 100% de satisfação garantida</span>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="depoimentos">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-quote-left"></i> Depoimentos</div>
+        <h2 class="section-title">O que Nossos Clientes <span class="text-gradient">Dizem de Nós</span></h2>
+        <p class="section-subtitle">Exemplo de como apresentar depoimentos e avaliações dos seus clientes satisfeitos.</p>
+      </div>
+
+      <div class="pricing-demo-notice reveal">
+        <i class="fa-solid fa-circle-info"></i>
+        <span><strong>Nota de Demonstração:</strong> Estes depoimentos são exemplos ilustrativos de como exibiremos as avaliações reais dos <em>seus clientes</em> no Google e redes sociais.</span>
+      </div>
+
+      <div class="carousel-wrapper reveal">
+        <div class="carousel-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-right quote-icon"></i>
+              <p class="testimonial-text">
+                "Excelente atendimento! O profissionalismo e a agilidade da equipe superaram todas as minhas expectativas. Recomendo de olhos fechados!"
+              </p>
+              <div class="testimonial-user">
+                <img src="assets/images/avatar-1.svg" alt="Cliente Exemplo 1">
+                <div class="user-info">
+                  <h3>Mariana Silva</h3>
+                  <p>Cliente Satisfeita</p>
+                  <div class="stars-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-right quote-icon"></i>
+              <p class="testimonial-text">
+                "Qualidade impecável do produto e atenção em cada detalhe. Com certeza voltarei a contratar os serviços no futuro!"
+              </p>
+              <div class="testimonial-user">
+                <img src="assets/images/avatar-2.svg" alt="Cliente Exemplo 2">
+                <div class="user-info">
+                  <h3>Fernanda Oliveira</h3>
+                  <p>Cliente Frequente</p>
+                  <div class="stars-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <i class="fa-solid fa-quote-right quote-icon"></i>
+              <p class="testimonial-text">
+                "Transparência, pontualidade e resultado acima do esperado. Sem dúvidas a melhor escolha da região!"
+              </p>
+              <div class="testimonial-user">
+                <img src="assets/images/avatar-3.svg" alt="Cliente Exemplo 3">
+                <div class="user-info">
+                  <h3>Lucas Santos</h3>
+                  <p>Cliente Corporativo</p>
+                  <div class="stars-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls reveal">
+        <button class="carousel-btn prev-btn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-btn next-btn" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faq">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-circle-question"></i> FAQ</div>
+        <h2 class="section-title">Perguntas <span class="text-gradient">Frequentes</span></h2>
+        <p class="section-subtitle">Respostas claras para as dúvidas mais comuns dos seus futuros clientes.</p>
+      </div>
+
+      <div class="pricing-demo-notice reveal" style="max-width: 800px; margin: 0 auto 2rem auto;">
+        <i class="fa-solid fa-circle-info"></i>
+        <span><strong>Nota de Demonstração:</strong> Esta seção de perguntas frequentes ilustra como sanaremos as dúvidas mais comuns dos <em>seus clientes</em> para acelerar o agendamento e fechamento de serviços.</span>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item reveal">
+          <button class="faq-header">
+            <span>Como faço para agendar um horário ou orçamento?</span>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body">
+            <p>Você pode clicar em qualquer botão de WhatsApp nesta página ou preencher o formulário no final do site. Nossa equipe responderá em minutos!</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-header">
+            <span>Quais são as formas de pagamento aceitas?</span>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body">
+            <p>Aceitamos Pix, cartões de crédito em até 12x, boleto bancário e transferência. Oferecemos condições especiais para pagamento à vista.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-header">
+            <span>Onde fica localizada a empresa / onde os serviços são prestados?</span>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body">
+            <p>Realizamos atendimentos presenciais em nossa sede bem como atendimento online / entregas em todo o Brasil dependendo do seu nicho.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-header">
+            <span>Quais são os horários de atendimento?</span>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body">
+            <p>Nosso atendimento funciona de Segunda a Sexta, das 08h às 18h, e aos Sábados das 09h às 13h via WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUDGET CALCULATOR SECTION -->
+    <section id="orcamento" class="budget-section">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-calculator"></i> Orçamento</div>
+        <h2 class="section-title">Monte o Seu Orçamento</h2>
+        <p class="section-subtitle">Selecione os recursos que você precisa e receba uma proposta personalizada no WhatsApp.</p>
+      </div>
+      <div class="budget-grid reveal" id="budget-grid">
+        <div class="budget-option" data-price="497">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-solid fa-file-lines"></i></span>
+          <span class="budget-label">Landing Page</span>
+          <span class="budget-price">R$ 497</span>
+        </div>
+        <div class="budget-option" data-price="197">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-solid fa-bolt"></i></span>
+          <span class="budget-label">Otimização de Velocidade</span>
+          <span class="budget-price">R$ 197</span>
+        </div>
+        <div class="budget-option" data-price="297">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+          <span class="budget-label">Otimização SEO</span>
+          <span class="budget-price">R$ 297</span>
+        </div>
+        <div class="budget-option" data-price="147">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-brands fa-whatsapp"></i></span>
+          <span class="budget-label">Integração com WhatsApp</span>
+          <span class="budget-price">R$ 147</span>
+        </div>
+        <div class="budget-option" data-price="197">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-solid fa-chart-simple"></i></span>
+          <span class="budget-label">GA4 + Meta Pixel</span>
+          <span class="budget-price">R$ 197</span>
+        </div>
+        <div class="budget-option" data-price="397">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-solid fa-newspaper"></i></span>
+          <span class="budget-label">Blog Integrado</span>
+          <span class="budget-price">R$ 397</span>
+        </div>
+        <div class="budget-option" data-price="597">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-solid fa-gears"></i></span>
+          <span class="budget-label">Painel CMS (editar conteúdo)</span>
+          <span class="budget-price">R$ 597</span>
+        </div>
+        <div class="budget-option" data-price="360">
+          <span class="budget-checkmark"></span>
+          <span class="budget-icon"><i class="fa-solid fa-server"></i></span>
+          <span class="budget-label">Hospedagem + Domínio (1 ano)</span>
+          <span class="budget-price">R$ 360</span>
+        </div>
+      </div>
+      <div class="budget-total reveal">
+        <div class="budget-total-left">
+          <span class="budget-total-label">Total Estimado:</span>
+          <span class="budget-total-value">R$ 0,00</span>
+        </div>
+        <button class="btn btn-primary btn-lg btn-shine budget-cta" disabled>
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Solicitar Proposta no WhatsApp</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION (CTA) SECTION -->
+    <section id="cta">
+      <div class="cta-box reveal">
+        <h2>Pronto para Fazer o Seu Negócio Crescer?</h2>
+        <p>Entre em contato agora mesmo e agende um atendimento exclusivo.</p>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-shine" data-magnetic>
+          <span>Falar no WhatsApp Agora</span>
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contato">
+      <div class="section-header reveal">
+        <div class="badge"><i class="fa-solid fa-paper-plane"></i> Contato do Seu Negócio</div>
+        <h2 class="section-title">Canais de Atendimento <span class="text-gradient">da Sua Empresa</span></h2>
+        <p class="section-subtitle">Nesta seção, seus futuros clientes encontrarão todas as formas de contato e poderão enviar solicitações diretamente para o seu WhatsApp e E-mail.</p>
+      </div>
+
+      <!-- BANNER EXPLICATIVO PARA O SEU CLIENTE -->
+      <div class="contact-demo-banner reveal">
+        <div class="banner-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="banner-text">
+          <strong>Estrutura de Contato Pronta Para o Seu Negócio:</strong>
+          <span>Todos os dados abaixo (Endereço, E-mail, Telefone, WhatsApp e Horários) serão 100% personalizados com as informações reais da sua empresa.</span>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal reveal-left">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-text">
+              <h3>Endereço da Sua Empresa</h3>
+              <p>Av. Principal do Seu Bairro, 1000 - Cidade / UF</p>
+              <span class="info-note"><i class="fa-solid fa-map-location-dot"></i> (Localização integrada ao Google Maps no site final)</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info-text">
+              <h3>E-mail Comercial da Sua Empresa</h3>
+              <p>contato@suaempresa.com.br</p>
+              <span class="info-note"><i class="fa-solid fa-inbox"></i> (Mensagens recebidas direto na sua caixa de entrada)</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-text">
+              <h3>WhatsApp & Telefone de Atendimento</h3>
+              <p>+55 (00) 99999-9999</p>
+              <span class="info-note"><i class="fa-brands fa-whatsapp"></i> (Botão com abertura direta no WhatsApp do seu negócio)</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="info-text">
+              <h3>Horário de Funcionamento</h3>
+              <p>Segunda a Sexta: 08h às 18h | Sábado: 08h às 12h</p>
+              <span class="info-note"><i class="fa-solid fa-circle-check"></i> (Seu cliente saberá exatamente quando sua empresa está aberta)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal-right">
+          <div class="form-demo-badge">
+            <i class="fa-solid fa-user-check"></i>
+            <span>Formulário de Captação de Clientes (Leads)</span>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Nome do Cliente *</label>
+              <input type="text" id="name" class="form-input" placeholder="Ex: Maria Silva (Seu cliente digita o nome dele aqui)">
+              <div class="form-error">Por favor, insira o nome do cliente.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail do Cliente *</label>
+              <input type="email" id="email" class="form-input" placeholder="cliente@exemplo.com.br">
+              <div class="form-error">Por favor, insira um e-mail válido.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Telefone / WhatsApp do Cliente *</label>
+              <input type="tel" id="phone" class="form-input" placeholder="(00) 99999-9999 (Para sua equipe retornar)">
+              <div class="form-error">Insira um número de telefone com DDD.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Mensagem ou Solicitação do Cliente *</label>
+              <textarea id="message" class="form-input" placeholder="O seu cliente escreverá aqui a dúvida, agendamento ou pedido de orçamento para a sua empresa..."></textarea>
+              <div class="form-error">Por favor, escreva a mensagem.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-shine" style="width: 100%;" data-magnetic>
+              <span>Enviar Direto para o WhatsApp / E-mail da Sua Empresa</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIVE DEMO PALETTE SWITCHER WIDGET -->
+  <div id="niche-widget">
+    <button class="niche-toggle-btn" id="niche-toggle">
+      <span class="current-theme-dot" id="current-theme-dot" style="background: #2563eb;"></span>
+      <i class="fa-solid fa-palette"></i>
+      <span>Trocar Tema</span>
+      <i class="fa-solid fa-chevron-up niche-arrow"></i>
+    </button>
+    <div class="niche-menu" id="niche-menu">
+      <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem;">
+        Selecione o Tema:
+      </div>
+      <div class="niche-opt active" data-theme="tech">
+        <span class="niche-dot" style="background: #2563eb;"></span>
+        <span>Tema Azul</span>
+      </div>
+      <div class="niche-opt" data-theme="health">
+        <span class="niche-dot" style="background: #10b981;"></span>
+        <span>Tema Verde</span>
+      </div>
+      <div class="niche-opt" data-theme="beauty">
+        <span class="niche-dot" style="background: #7c3aed;"></span>
+        <span>Tema Roxo</span>
+      </div>
+      <div class="niche-opt" data-theme="gourmet">
+        <span class="niche-dot" style="background: #ef4444;"></span>
+        <span>Tema Vermelho</span>
+      </div>
+      <div class="niche-opt" data-theme="fitness">
+        <span class="niche-dot" style="background: #06b6d4;"></span>
+        <span>Tema Ciano</span>
+      </div>
+      <div class="niche-opt" data-theme="law">
+        <span class="niche-dot" style="background: #eab308;"></span>
+        <span>Tema Dourado</span>
+      </div>
+      <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-dim); margin-top: 0.75rem; margin-bottom: 0.5rem; border-top: 1px solid var(--border-light); padding-top: 0.5rem;">
+        Modo de Exibição:
+      </div>
+      <div class="niche-opt" id="niche-mode-toggle" style="justify-content: space-between;">
+        <span style="display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-sun" id="niche-mode-icon"></i>
+          <span id="niche-mode-text">Modo Claro</span>
+        </span>
+        <i class="fa-solid fa-rotate" style="font-size: 0.8rem; opacity: 0.6;"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST FEEDBACK NOTIFICATION -->
+  <div id="toast">
+    <i class="fa-solid fa-circle-check" style="color: #34d399; font-size: 1.3rem;"></i>
+    <span class="toast-text">Mensagem enviada com sucesso!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-brand">
+          <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+          <span class="nav-brand-text">SUA<strong class="brand-accent">EMPRESA</strong></span>
+        </a>
+        <p>Exemplo de rodapé para o site do seu cliente, com links rápidos, redes sociais e formulário de contato.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-icon" aria-label="Portfolio"><i class="fa-solid fa-briefcase"></i></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Como Funciona</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Soluções</h4>
+        <ul class="footer-links">
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 <span id="copyright-brand">Sua Empresa</span>. Todos os direitos reservados. | <a href="politica-de-privacidade" style="color: var(--text-muted); text-decoration: underline;">Política de Privacidade</a></p>
+      <p>Desenvolvido com excelência e máxima performance.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP WIDGET -->
+  <a href="#" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-online-dot"></span>
+    <div class="whatsapp-tooltip">
+      <strong>Quero um Site Como Este</strong>
+      <span>Falar no WhatsApp (11) 93437-6059</span>
+    </div>
+  </a>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" aria-label="Voltar ao Topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- COOKIE CONSENT BANNER (LGPD DEMO) -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner-content">
+      <div class="cookie-banner-icon">
+        <i class="fa-solid fa-cookie-bite"></i>
+      </div>
+      <div class="cookie-banner-text">
+        <h4><i class="fa-solid fa-circle-info" style="color: var(--primary);"></i> Modelo Demonstrativo — Privacidade LGPD</h4>
+        <p>Este aviso e gerenciador de cookies ilustra como o site da sua empresa estará em total conformidade com a LGPD. Veja nossa <a href="politica-de-privacidade">Política de Privacidade</a>.</p>
+      </div>
+    </div>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept-all" class="btn btn-primary btn-sm btn-shine">
+        <i class="fa-solid fa-check"></i> Aceitar Todos
+      </button>
+      <button id="cookie-open-preferences" class="btn btn-secondary btn-sm">
+        <i class="fa-solid fa-sliders"></i> Personalizar
+      </button>
+      <button id="cookie-reject-optional" class="cookie-link-btn">
+        Apenas Essenciais
+      </button>
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL (LGPD DEMO) -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop"></div>
+  <div id="cookie-modal" class="cookie-modal">
+    <div class="cookie-modal-header">
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <i class="fa-solid fa-shield-halved" style="color: var(--primary); font-size: 1.25rem;"></i>
+        <h3>Preferências de Cookies &amp; Privacidade</h3>
+      </div>
+      <button id="cookie-modal-close" class="cookie-modal-close" aria-label="Fechar Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cookie-modal-body">
+      <div class="pricing-demo-notice" style="margin-bottom: 1.25rem;">
+        <i class="fa-solid fa-circle-info"></i>
+        <span><strong>Nota de Demonstração:</strong> Este gerenciador de privacidade ilustra como os clientes da sua empresa poderão personalizar e salvar preferências em conformidade com a LGPD.</span>
+      </div>
+
+      <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        Personalize suas preferências de privacidade. Os cookies estritamente necessários são ativados por padrão para garantir o funcionamento correto do site.
+      </p>
+
+      <!-- Category 1 -->
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <div>
+            <span class="cookie-cat-title">🔒 Cookies Essenciais</span>
+            <span class="cookie-cat-status required">Sempre Ativo</span>
+          </div>
+        </div>
+        <p class="cookie-cat-desc">Necessários para o funcionamento do site, navegação segura e salvamento de preferências de exibição (como tema claro/escuro).</p>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-cat-title">📊 Cookies de Desempenho &amp; Estatísticas</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="cookie-analytics-check" checked>
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+        <p class="cookie-cat-desc">Permitem medir o tráfego de visitantes e entender quais seções da página geram mais interesse para melhorias contínuas.</p>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-cat-title">📢 Cookies de Marketing &amp; Redes Sociais</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="cookie-marketing-check" checked>
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+        <p class="cookie-cat-desc">Utilizados para redirecionamento estratégico (Pixel do Meta e Google Ads), exibindo anúncios relevantes em redes sociais.</p>
+      </div>
+    </div>
+
+    <div class="cookie-modal-footer">
+      <a href="politica-de-privacidade" class="cookie-policy-link">
+        <i class="fa-solid fa-file-contract"></i> Política de Privacidade Completa
+      </a>
+      <button id="cookie-save-preferences" class="btn btn-primary btn-shine btn-sm">
+        <i class="fa-solid fa-floppy-disk"></i> Salvar Preferências
+      </button>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT BUNDLE (minified, all modules in one) -->
+  <script defer src="js/bundle.js"></script>
+</body>
+</html>
