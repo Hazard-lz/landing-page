@@ -25,6 +25,12 @@
   <link rel="stylesheet" href="css/themes.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="css/themes.css"></noscript>
 
+  <style>
+    @media (max-width: 470px) {
+      .nav-actions .btn-sm span { display: none; }
+      .nav-actions .btn-sm { padding: 0.5rem 0.65rem; }
+    }
+  </style>
 
 </head>
 <body>
@@ -61,50 +67,72 @@
       </div>
 
       <div class="privacy-content" style="color: var(--text-main); line-height: 1.8; font-size: 0.975rem;">
-        
+
         <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--primary);">1. Introdução e Compromisso com a LGPD</h3>
         <p style="color: var(--text-muted); margin-bottom: 1rem;">
-          A Leonardo Gomes leva a privacidade dos seus clientes e visitantes extremamente a sério. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos seus dados pessoais de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).
+          Esta Política de Privacidade descreve como as informações dos visitantes são tratadas neste site, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD). O site é de propriedade e operado por Leonardo Gomes, pessoa física desenvolvedor web.
         </p>
 
         <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">2. Dados Coletados e Finalidade</h3>
-        <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Coletamos apenas as informações estritamente necessárias para prestação dos nossos serviços:</p>
+        <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Coletamos as seguintes informações nas situações descritas:</p>
         <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
-          <li><strong>Dados fornecidos voluntariamente:</strong> Nome, e-mail, telefone/WhatsApp preenchidos em formulários para solicitação de orçamentos e agendamentos.</li>
-          <li><strong>Dados de navegação:</strong> Endereço IP, tipo de navegador, páginas visitadas e tempo de permanência, utilizados exclusivamente para melhorias de experiência e estatísticas.</li>
+          <li><strong>Formulário de contato:</strong> Nome, e-mail, telefone e mensagem são enviados voluntariamente por você. Esses dados são transmitidos ao serviço <strong>EmailJS</strong> (terceiro) para processamento e, em seguida, encaminhados ao desenvolvedor via WhatsApp para responder seu orçamento.</li>
+          <li><strong>Google Analytics 4:</strong> Endereço IP anonimizado, páginas visitadas, tempo de sessão, navegador e sistema operacional. Usado para entender o tráfego e melhorar o site.</li>
+          <li><strong>Armazenamento local (localStorage):</strong> Preferências de tema (claro/escuro), consentimento de privacidade e estado do popup do WhatsApp. Esses dados nunca saem do seu navegador.</li>
         </ul>
 
-        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">3. Uso de Cookies</h3>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">3. Tecnologias de Armazenamento no Navegador</h3>
         <p style="color: var(--text-muted); margin-bottom: 1rem;">
-          Cookies são pequenos arquivos de texto armazenados no seu dispositivo para melhorar a navegação. Utilizamos cookies para:
+          Este site <strong>não utiliza cookies HTTP</strong> (arquivos de texto enviados pelo servidor). Em vez disso, utiliza a <strong>API localStorage</strong> do seu navegador para salvar localmente:
         </p>
         <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
-          <li><strong>Cookies Essenciais:</strong> Garantem o funcionamento do site e a gravação de preferências como modo escuro/claro.</li>
-          <li><strong>Cookies Analíticos:</strong> Nos ajudam a entender como os visitantes interagem com o site.</li>
-          <li><strong>Cookies de Marketing:</strong> Permitem direcionar conteúdos e ofertas relevantes.</li>
+          <li><strong>Preferências de tema:</strong> Salva se você escolheu o modo claro ou escuro.</li>
+          <li><strong>Consentimento:</strong> Registra sua escolha sobre armazenamento essencial e uso de Google Analytics.</li>
+          <li><strong>Popup do WhatsApp:</strong> Evita que o popup de boas-vindas reapareça após fechado.</li>
         </ul>
         <p style="color: var(--text-muted); margin-bottom: 1rem;">
-          Você pode alterar suas preferências de cookies a qualquer momento utilizando o gerenciador de privacidade disponível no rodapé do nosso site.
+          Diferentemente de cookies, o <code>localStorage</code> não é enviado automaticamente ao servidor e só pode ser lido por scripts deste site. Você pode limpar esses dados a qualquer momento nas configurações do seu navegador.
         </p>
 
-        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">4. Compartilhamento de Dados</h3>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">4. Google Analytics 4</h3>
         <p style="color: var(--text-muted); margin-bottom: 1rem;">
-          Nós <strong>não vendemos, alugamos ou repassamos</strong> seus dados pessoais a terceiros. O compartilhamento ocorre exclusivamente quando necessário para processamento de agendamentos ou cumprimento de obrigações legais.
+          Este site utiliza o <strong>Google Analytics 4 (GA4)</strong>, serviço de análise da Google LLC, para coletar dados anônimos de navegação (páginas visitadas, duração da sessão, origem do tráfego). O tratamento dos dados segue a <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" style="color: var(--primary-text); text-decoration: underline;">Política de Privacidade do Google</a>.
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">
+          O GA4 só é carregado <strong>após seu consentimento explícito</strong> no banner de privacidade. Se você clicar em "Apenas Essenciais" ou desabilitar a opção de estatísticas ao personalizar, o GA4 não será carregado nesta visita. Você também pode impedir a coleta permanentemente instalando o <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color: var(--primary-text); text-decoration: underline;">opt-out do Google Analytics</a>.
         </p>
 
-        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">5. Seus Direitos como Titular dos Dados</h3>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">5. Compartilhamento de Dados com Terceiros</h3>
+        <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Seus dados podem ser processados pelos seguintes terceiros:</p>
+        <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+          <li><strong>EmailJS</strong> — Recebe e processa os dados do formulário de contato (nome, e-mail, telefone, mensagem). Consulte a <a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-text); text-decoration: underline;">política de privacidade do EmailJS</a>.</li>
+          <li><strong>Google Analytics 4</strong> — Processa dados anônimos de navegação.</li>
+          <li><strong>Google Fonts</strong> — O carregamento das fontes pode compartilhar seu endereço IP com servidores do Google.</li>
+          <li><strong>WhatsApp (Meta)</strong> — Ao clicar em links do WhatsApp, você é redirecionado ao serviço da Meta, sujeito à <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: var(--primary-text); text-decoration: underline;">política de privacidade do WhatsApp</a>.</li>
+        </ul>
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">
+          Nós <strong>não vendemos, alugamos ou repassamos</strong> seus dados pessoais para fins de marketing ou publicidade.
+        </p>
+
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">6. Seus Direitos como Titular dos Dados</h3>
         <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Nos termos da LGPD, você possui o direito de:</p>
         <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
           <li>Confirmar a existência de tratamento dos seus dados;</li>
           <li>Acessar e corrigir dados incompletos, inexatos ou desatualizados;</li>
           <li>Solicitar a exclusão dos seus dados da nossa base a qualquer momento;</li>
-          <li>Revogar seu consentimento para envio de comunicações.</li>
+          <li>Revogar seu consentimento para coleta de dados;</li>
+          <li>Solicitar a portabilidade dos dados a outro fornecedor.</li>
         </ul>
 
-        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">6. Contato do Encarregado de Proteção de Dados (DPO)</h3>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--primary);">7. Contato</h3>
         <p style="color: var(--text-muted); margin-bottom: 1rem;">
-          Para exercer seus direitos ou tirar dúvidas sobre nossa política de privacidade, entre em contato direto com o nosso atendimento via WhatsApp pelo número <strong>(11) 93437-6059</strong> ou através dos formulários do site.
+          Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato:
         </p>
+        <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+          <li><strong>E-mail:</strong> leogb1200@gmail.com</li>
+          <li><strong>WhatsApp:</strong> (11) 93437-6059</li>
+          <li><strong>Responsável:</strong> Leonardo Gomes (pessoa física)</li>
+        </ul>
 
       </div>
 
@@ -126,6 +154,68 @@
       <p>Desenvolvido com excelência e máxima performance.</p>
     </div>
   </footer>
+
+  <!-- COOKIE PREFERENCES MODAL (para link do footer funcionar) -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop"></div>
+  <div id="cookie-modal" class="cookie-modal">
+    <div class="cookie-modal-header">
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <i class="fa-solid fa-shield-halved" style="color: var(--primary); font-size: 1.25rem;"></i>
+        <h3>Preferências de Privacidade</h3>
+      </div>
+      <button id="cookie-modal-close" class="cookie-modal-close" aria-label="Fechar Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cookie-modal-body">
+      <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        Personalize suas preferências de privacidade. Nenhum dado é armazenado sem sua autorização — o armazenamento local (localStorage) só é ativado após você salvar sua escolha.
+      </p>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-cat-title">🔒 Armazenamento Essencial</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="cookie-essential-check">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+        <p class="cookie-cat-desc">Salva localmente suas preferências de tema (claro/escuro), consentimento e estado do popup de WhatsApp. Se desabilitado, essas preferências não serão lembradas entre visitas.</p>
+      </div>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-cat-title">📊 Google Analytics 4 (Estatísticas)</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="cookie-analytics-check">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+        <p class="cookie-cat-desc">Coleta dados anônimos de navegação via Google Analytics 4 (páginas visitadas, tempo de sessão, origem do tráfego) para entender o desempenho do site e melhorar a experiência.</p>
+      </div>
+
+      <div id="cookie-category-marketing" class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-cat-title">📢 Cookies de Marketing &amp; Redes Sociais</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="cookie-marketing-check">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+        <p class="cookie-cat-desc">Utilizados para redirecionamento estratégico (Pixel do Meta e Google Ads), exibindo anúncios relevantes em redes sociais. Esta opção aparece apenas quando estas ferramentas estão configuradas no site.</p>
+      </div>
+    </div>
+
+    <div class="cookie-modal-footer">
+      <a href="/politica-de-privacidade" class="cookie-policy-link">
+        <i class="fa-solid fa-file-contract"></i> Política de Privacidade Completa
+      </a>
+      <button id="cookie-save-preferences" class="btn btn-primary btn-shine btn-sm">
+        <i class="fa-solid fa-floppy-disk"></i> Salvar Preferências
+      </button>
+    </div>
+  </div>
 
   <script defer src="js/bundle.js"></script>
 </body>

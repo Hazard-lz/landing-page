@@ -1630,6 +1630,7 @@ footer {
 
   .navbar {
     padding: 0.85rem 1.25rem;
+    gap: 1rem;
   }
 
   .nav-desktop-cta {

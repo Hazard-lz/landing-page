@@ -18,8 +18,14 @@ function initFAQAccordion() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const phoneInput = document.getElementById('phone');
+  const pageLoadTime = Date.now();
 
   if (!form) return;
+
+  const emailjsCfg = window.SITE_CONFIG?.form?.emailjs;
+  if (typeof emailjs !== 'undefined' && emailjsCfg?.userId) {
+    emailjs.init(emailjsCfg.userId);
+  }
 
   // Phone mask
   if (phoneInput) {
@@ -42,6 +48,12 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const elapsed = (Date.now() - pageLoadTime) / 1000;
+    const honeypot = document.getElementById('hp-field');
+    if (elapsed < 8 || (honeypot && honeypot.value.trim())) {
+      return;
+    }
 
     const name = document.getElementById('name');
     const email = document.getElementById('email');
@@ -157,7 +169,7 @@ function initContactForm() {
       btn.disabled = false;
       btn.innerHTML = originalHTML;
       document.getElementById('contact-form').reset();
-      window.location.href = 'obrigado';
+      showToast('Mensagem enviada com sucesso!');
     }).catch(() => {
       btn.disabled = false;
       btn.innerHTML = originalHTML;
@@ -201,54 +213,92 @@ function initCookieConsent() {
   const btnSavePreferences = document.getElementById('cookie-save-preferences');
   const btnFooterOpenModal = document.getElementById('open-cookie-modal-footer');
 
-  if (!banner) return;
+  const marketingCategory = document.getElementById('cookie-category-marketing');
+  if (marketingCategory) {
+    const hasMarketingIds = cfg &&
+      (cfg.analytics?.metaPixelId || cfg.analytics?.googleAdsConversionId);
+    marketingCategory.style.display = hasMarketingIds ? '' : 'none';
+  }
 
-  const savedConsent = localStorage.getItem('demo_cookie_consent');
-
-  if (!savedConsent) {
-    setTimeout(() => {
-      banner.classList.add('show');
-    }, 1200);
+  // Banner logic (só executa se o elemento banner existir na página)
+  if (banner) {
+    const savedConsent = localStorage.getItem('demo_cookie_consent');
+    if (!savedConsent) {
+      setTimeout(() => {
+        banner.classList.add('show');
+      }, 1200);
+    }
   }
 
   function hideBanner() {
-    banner.classList.remove('show');
+    if (banner) banner.classList.remove('show');
+  }
+
+  function syncModalCheckboxes() {
+    const savedConsent = localStorage.getItem('demo_cookie_consent');
+    let essential = false, analytics = false, marketing = false;
+    if (savedConsent) {
+      try { const c = JSON.parse(savedConsent); essential = !!c.essential; analytics = !!c.analytics; marketing = !!c.marketing; } catch {}
+    }
+    const elEssential = document.getElementById('cookie-essential-check');
+    const elAnalytics = document.getElementById('cookie-analytics-check');
+    const elMarketing = document.getElementById('cookie-marketing-check');
+    if (elEssential) elEssential.checked = essential;
+    if (elAnalytics) elAnalytics.checked = analytics;
+    if (elMarketing) elMarketing.checked = marketing;
   }
 
   function openModal() {
+    syncModalCheckboxes();
     hideBanner();
     backdrop?.classList.add('show');
     modal?.classList.add('show');
   }
 
-  function closeModal() {
+  function closeModal(savedJustNow) {
     backdrop?.classList.remove('show');
     modal?.classList.remove('show');
+    if (banner && !savedJustNow) {
+      const savedConsent = localStorage.getItem('demo_cookie_consent');
+      if (!savedConsent) {
+        banner.classList.add('show');
+      }
+    }
   }
 
   btnAcceptAll?.addEventListener('click', () => {
-    localStorage.setItem('demo_cookie_consent', JSON.stringify({ analytics: true, marketing: true }));
+    localStorage.setItem('demo_cookie_consent', JSON.stringify({ essential: true, analytics: true, marketing: true }));
     hideBanner();
-    showToast('Preferências de cookies salvas: Todos aceitos.');
+    showToast('Todas as preferências aceitas.');
+    if (typeof initAnalytics === 'function') initAnalytics();
   });
 
   btnRejectOptional?.addEventListener('click', () => {
-    localStorage.setItem('demo_cookie_consent', JSON.stringify({ analytics: false, marketing: false }));
+    localStorage.setItem('demo_cookie_consent', JSON.stringify({ essential: true, analytics: false, marketing: false }));
     hideBanner();
-    showToast('Preferências salvas: Apenas cookies essenciais ativos.');
+    showToast('Apenas armazenamento essencial ativado.');
   });
 
   btnOpenPreferences?.addEventListener('click', openModal);
   btnFooterOpenModal?.addEventListener('click', openModal);
-  btnCloseModal?.addEventListener('click', closeModal);
-  backdrop?.addEventListener('click', closeModal);
+  btnCloseModal?.addEventListener('click', () => closeModal(false));
+  backdrop?.addEventListener('click', () => closeModal(false));
 
   btnSavePreferences?.addEventListener('click', () => {
-    const analytics = document.getElementById('cookie-analytics-check')?.checked ?? true;
-    const marketing = document.getElementById('cookie-marketing-check')?.checked ?? true;
+    const essential = document.getElementById('cookie-essential-check')?.checked ?? true;
+    const analytics = document.getElementById('cookie-analytics-check')?.checked ?? false;
+    const marketing = document.getElementById('cookie-marketing-check')?.checked ?? false;
 
-    localStorage.setItem('demo_cookie_consent', JSON.stringify({ analytics, marketing }));
-    closeModal();
-    showToast('Suas preferências de privacidade foram salvas com sucesso!');
+    if (essential) {
+      localStorage.setItem('demo_cookie_consent', JSON.stringify({ essential, analytics, marketing }));
+    } else {
+      localStorage.removeItem('demo_cookie_consent');
+      localStorage.removeItem('theme-mode');
+      localStorage.removeItem('demo_niche_theme');
+      localStorage.removeItem('wa_popup_closed');
+    }
+    closeModal(true);
+    showToast('Preferências de privacidade salvas com sucesso!');
+    if (essential && typeof initAnalytics === 'function') initAnalytics();
   });
 }

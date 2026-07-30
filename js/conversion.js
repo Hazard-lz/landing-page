@@ -45,13 +45,45 @@ function initWhatsAppWidget() {
 
   document.body.appendChild(popup);
 
-  // Mostrar popup com delay configurável
+  // Timer só começa DEPOIS que o cookie-banner não estiver mais sendo exibido
   const popupDelay = cfg.whatsAppPopup?.delay ?? 15000;
-  setTimeout(() => {
-    if (!localStorage.getItem('wa_popup_closed')) {
+
+  function startWaTimer() {
+    setTimeout(() => {
+      if (localStorage.getItem('wa_popup_closed')) return;
+      const backdrop = document.getElementById('cookie-modal-backdrop');
+      if (backdrop?.classList.contains('show')) return;
       popup.classList.add('show');
-    }
-  }, popupDelay);
+    }, popupDelay);
+  }
+
+  const banner = document.getElementById('cookie-banner');
+  const hasConsent = localStorage.getItem('demo_cookie_consent');
+  if (banner && !hasConsent) {
+    let bannerWasShown = banner.classList.contains('show');
+    const obs = new MutationObserver(() => {
+      if (banner.classList.contains('show')) {
+        bannerWasShown = true;
+      } else if (bannerWasShown) {
+        obs.disconnect();
+        startWaTimer();
+      }
+    });
+    obs.observe(banner, { attributes: true, attributeFilter: ['class'] });
+  } else {
+    startWaTimer();
+  }
+
+  // Caso o modal de privacidade abra depois do popup já visível, esconde na hora
+  const backdrop = document.getElementById('cookie-modal-backdrop');
+  if (backdrop) {
+    const obs = new MutationObserver(() => {
+      if (backdrop.classList.contains('show')) {
+        popup.classList.remove('show');
+      }
+    });
+    obs.observe(backdrop, { attributes: true, attributeFilter: ['class'] });
+  }
 
   popup.querySelector('.wa-popup-close').addEventListener('click', () => {
     popup.classList.remove('show');
@@ -71,17 +103,34 @@ function initWhatsAppWidget() {
 }
 
 /* ─── 2. UNIFIED ANALYTICS TRACKING ─────────────────────────────────────── */
+
+let analyticsListenersRegistered = false;
+
 function initAnalytics() {
   const cfg = window.SITE_CONFIG;
   if (!cfg || !cfg.analytics || cfg.analytics.enabled === false) return;
 
-  const gtmId = cfg.analytics.googleTagManagerId;
-  const gaId = cfg.analytics.googleAnalyticsId;
-  const pixelId = cfg.analytics.metaPixelId;
+  loadApprovedScripts(cfg.analytics);
 
-  // Google Tag Manager
-  if (gtmId) {
-    if (!document.querySelector(`script[src*="googletagmanager.com/gtm.js?id=${gtmId}"]`)) {
+  if (!analyticsListenersRegistered) {
+    analyticsListenersRegistered = true;
+    registerAnalyticsEvents();
+  }
+}
+
+function loadApprovedScripts(analyticsCfg) {
+  const savedConsent = localStorage.getItem('demo_cookie_consent');
+  if (!savedConsent) return;
+
+  let consent;
+  try { consent = JSON.parse(savedConsent); } catch { return; }
+
+  const gtmId = analyticsCfg.googleTagManagerId;
+  const gaId = analyticsCfg.googleAnalyticsId;
+  const pixelId = analyticsCfg.metaPixelId;
+
+  if (consent.analytics) {
+    if (gtmId && !document.querySelector(`script[src*="googletagmanager.com/gtm.js?id=${gtmId}"]`)) {
       const gtmScript = document.createElement('script');
       gtmScript.async = true;
       gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
@@ -89,20 +138,16 @@ function initAnalytics() {
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-    }
-    // Noscript fallback
-    if (!document.querySelector('noscript[data-gtm]')) {
-      const noscript = document.createElement('noscript');
-      noscript.setAttribute('data-gtm', '');
-      noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
-      document.body.insertAdjacentElement('afterbegin', noscript);
-    }
-  }
 
-  // Google Analytics 4
-  if (gaId) {
-    // Injetar script GA4
-    if (!document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${gaId}"]`)) {
+      if (!document.querySelector('noscript[data-gtm]')) {
+        const noscript = document.createElement('noscript');
+        noscript.setAttribute('data-gtm', '');
+        noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+        document.body.insertAdjacentElement('afterbegin', noscript);
+      }
+    }
+
+    if (gaId && !document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${gaId}"]`)) {
       const gaScript = document.createElement('script');
       gaScript.async = true;
       gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
@@ -115,8 +160,7 @@ function initAnalytics() {
     }
   }
 
-  // Meta Pixel
-  if (pixelId) {
+  if (consent.marketing && pixelId) {
     if (!document.querySelector(`script#meta-pixel-${pixelId}`)) {
       const pixelScript = document.createElement('script');
       pixelScript.id = `meta-pixel-${pixelId}`;
@@ -135,8 +179,9 @@ function initAnalytics() {
       document.head.appendChild(pixelScript);
     }
   }
+}
 
-  // Auto-track events
+function registerAnalyticsEvents() {
   function trackEvent(action, label) {
     if (typeof gtag === 'function') {
       gtag('event', action, { event_category: 'conversion', event_label: label });
@@ -146,7 +191,6 @@ function initAnalytics() {
     }
   }
 
-  // Track WhatsApp button clicks
   document.addEventListener('click', (e) => {
     const waBtn = e.target.closest('[href*="wa.me"], [href*="whatsapp.com"]');
     if (waBtn) {
@@ -155,13 +199,11 @@ function initAnalytics() {
     }
   });
 
-  // Track form submission (wait for original submit handler)
   const form = document.getElementById('contact-form');
   if (form) {
     const origSubmit = form.querySelector('button[type="submit"]');
     if (origSubmit) {
       origSubmit.addEventListener('click', function() {
-        // Small delay to let validation run first
         setTimeout(() => {
           if (!form.querySelector('.form-group.error')) {
             trackEvent('Submit', 'contact-form');
@@ -171,7 +213,6 @@ function initAnalytics() {
     }
   }
 
-  // Track scroll depth
   let scrollDepths = new Set();
   window.addEventListener('scroll', () => {
     const h = document.documentElement;

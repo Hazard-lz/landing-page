@@ -33,7 +33,7 @@
     :root{--primary:#7c3aed;--primary-hover:#6d28d9;--primary-glow:rgba(124,58,237,0.35);--primary-text:#a78bfa;--accent:#a855f7;--accent-hover:#9333ea;--accent-glow:rgba(168,85,247,0.35);--grad-primary:linear-gradient(135deg,#7c3aed 0%,#a855f7 100%);--grad-primary-hover:linear-gradient(135deg,#6d28d9 0%,#9333ea 100%);--grad-text:linear-gradient(135deg,#ffffff 30%,#d8b4fe 60%,#c084fc 100%);--grad-dark-card:linear-gradient(145deg,rgba(255,255,255,0.05)0%,rgba(255,255,255,0.01)100%);--grad-glow:radial-gradient(circle,rgba(124,58,237,0.18)0%,rgba(168,85,247,0.1)50%,transparent 70%);--bg-dark:#0b0f19;--bg-darker:#060911;--bg-card:rgba(17,24,39,0.7);--bg-card-hover:rgba(31,41,55,0.8);--border-light:rgba(255,255,255,0.08);--border-active:rgba(124,58,237,0.5);--font-family:'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif;--text-main:#f9fafb;--text-muted:#9ca3af;--text-dim:#6b7280;--radius-sm:8px;--radius-md:14px;--radius-lg:24px;--radius-full:9999px;--shadow-sm:0 4px 6px -1px rgba(0,0,0,0.3);--shadow-md:0 10px 25px -5px rgba(0,0,0,0.4),0 8px 10px -6px rgba(0,0,0,0.3);--shadow-lg:0 20px 40px -15px rgba(0,0,0,0.6);--shadow-glow:0 0 30px rgba(124,58,237,0.3);--transit-fast:0.2s cubic-bezier(0.4,0,0.2,1);--transit-normal:0.35s cubic-bezier(0.4,0,0.2,1);--transit-slow:0.6s cubic-bezier(0.16,1,0.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;max-width:100%;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;max-width:100vw}body{background-color:var(--bg-dark);color:var(--text-main);font-family:var(--font-family);line-height:1.6;overflow-x:hidden;position:relative;width:100%;max-width:100vw}a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:none;background:none}img,svg{max-width:100%;height:auto;display:block}body.light-mode{background-color:#f8fafc!important;color:#0f172a!important;--bg-dark:#f8fafc;--bg-darker:#f1f5f9;--bg-card:#fff;--bg-card-hover:#f8fafc;--border-light:rgba(15,23,42,0.09);--border-color:rgba(15,23,42,0.12);--border-active:rgba(37,99,235,0.45);--text-main:#0f172a;--text-muted:#475569;--text-dim:#64748b;--primary-text:#1e40af;--grad-text:linear-gradient(135deg,#0f172a 20%,#2563eb 100%);--shadow-sm:0 2px 8px rgba(15,23,42,0.06);--shadow-md:0 8px 24px rgba(15,23,42,0.08);--shadow-lg:0 20px 50px rgba(15,23,42,0.1)}body.light-mode #preloader{background:#f8fafc!important}body.light-mode .navbar{background:rgba(255,255,255,0.85)!important;backdrop-filter:blur(20px)!important}body.light-mode .navbar.scrolled{background:rgba(255,255,255,0.96)!important;border-bottom:1px solid rgba(15,23,42,0.08)!important}body.light-mode .nav-link{color:#475569!important}body.light-mode .nav-link:hover,body.light-mode .nav-link.active{color:var(--primary)!important}body.light-mode .hamburger span{background:#0f172a!important}body.light-mode .hero{background:radial-gradient(circle at 50% 0%,rgba(37,99,235,0.06)0%,transparent 60%)!important}body.light-mode .hero h1{color:#0f172a!important}body.light-mode .hero p{color:#475569!important}body.light-mode .typing-text{background:var(--grad-primary)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}body.light-mode .hero-social-proof{border-top-color:rgba(15,23,42,0.1)!important}body.light-mode .avatar-group img{border-color:#fff!important}body.light-mode .proof-info p{color:#0f172a!important}body.light-mode .hero-image-wrapper{background:#fff!important;border-color:rgba(15,23,42,0.1)!important}body.light-mode .floating-badge{background:#fff!important;border-color:rgba(15,23,42,0.1)!important}.badge{background:color-mix(in srgb,var(--primary) 15%,transparent)!important;color:#fff!important;border-color:color-mix(in srgb,var(--primary) 50%,transparent)!important}.badge i{color:var(--primary)!important}body.light-mode .badge{background:color-mix(in srgb,var(--primary) 8%,transparent)!important;color:var(--primary)!important;border-color:color-mix(in srgb,var(--primary) 30%,transparent)!important}body.light-mode .badge i{color:var(--primary)!important}body.light-mode .section-title{color:#0f172a!important}body.light-mode .section-subtitle{color:#475569!important}body.light-mode .text-gradient{background:var(--grad-primary)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
   #preloader{position:fixed;inset:0;background:var(--bg-darker);z-index:99999;display:none;flex-direction:column;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}#preloader.active{display:flex}#preloader.fade-out{opacity:0;visibility:hidden}.loader-logo{font-size:1.8rem;font-weight:800;display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem}.loader-logo i{color:var(--primary);filter:drop-shadow(0 0 10px var(--primary))}.loader-bar{width:200px;height:4px;background:rgba(255,255,255,.1);border-radius:var(--radius-full);overflow:hidden;position:relative}.loader-progress{width:0%;height:100%;background:var(--grad-primary);border-radius:var(--radius-full);transition:width .3s ease}#scroll-progress{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--grad-primary);z-index:10000;transition:width .1s linear;box-shadow:0 0 10px var(--primary);will-change:width}.navbar{position:fixed;top:0;left:0;width:100%;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;z-index:1000;transition:padding .3s ease,background-color .3s ease,border-color .3s ease,box-shadow .3s ease;will-change:padding,background-color}.navbar.scrolled{background:rgba(11,15,25,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:.85rem 2rem;border-bottom:1px solid var(--border-light);box-shadow:var(--shadow-sm)}.nav-brand{display:flex;align-items:center;gap:.6rem;font-size:1.25rem;font-weight:800;letter-spacing:-.5px;color:var(--text-main);flex-shrink:0}.nav-brand .logo-icon{width:36px;height:36px;background:var(--grad-primary);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;box-shadow:var(--shadow-glow)}.brand-accent{color:var(--primary);transition:color .3s ease}.nav-menu{display:flex;align-items:center;gap:1.35rem;list-style:none}.mobile-cta-wrapper,.mobile-menu-header{display:none!important}.nav-link{font-size:.825rem;font-weight:600;color:var(--text-muted);transition:color var(--transit-fast);position:relative;white-space:nowrap}.nav-link:hover,.nav-link.active{color:var(--text-main)}.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0%;height:2px;background:var(--grad-primary);transition:width var(--transit-fast);border-radius:2px}.nav-link:hover::after,.nav-link.active::after{width:100%}.nav-actions{display:flex;align-items:center;gap:1rem;flex-shrink:0}.theme-mode-toggle{width:42px;height:42px;border-radius:var(--radius-full);background:var(--bg-card);border:1px solid var(--border-color);color:var(--text-main);font-size:1.15rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--transit-normal);-webkit-tap-highlight-color:transparent!important}.hamburger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:transparent;border:none;cursor:pointer;z-index:1001}.hamburger span{width:100%;height:2.5px;background:var(--text-main);border-radius:2px;transition:all .3s ease}.hamburger.active span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1.8rem;border-radius:var(--radius-md);font-size:.95rem;font-weight:600;text-decoration:none;transition:transform var(--transit-normal),box-shadow var(--transit-normal),background var(--transit-normal);overflow:hidden;text-align:center}.btn-primary{background:var(--grad-primary);color:#fff;box-shadow:0 4px 20px var(--primary-glow)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--primary-glow)}.btn-secondary{background:rgba(255,255,255,.05);color:var(--text-main);border:1px solid var(--border-light);backdrop-filter:blur(10px)}.btn-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);transform:translateY(-2px)}body.light-mode .navbar{background:rgba(255,255,255,.85)!important;backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important}body.light-mode .navbar.scrolled{background:rgba(255,255,255,.96)!important;border-bottom:1px solid rgba(15,23,42,.08)!important;box-shadow:0 4px 20px rgba(15,23,42,.06)!important}body.light-mode .nav-brand{color:#0f172a!important}body.light-mode .nav-link{color:#475569!important}body.light-mode .nav-link:hover,body.light-mode .nav-link.active{color:var(--primary)!important}body.light-mode .hamburger span{background:#0f172a!important}body.light-mode .btn-primary{background:var(--grad-primary)!important;color:#fff!important;box-shadow:0 4px 20px var(--primary-glow)!important}body.light-mode .btn-secondary{background:#fff!important;color:var(--primary)!important;border:1px solid var(--primary)!important;backdrop-filter:none!important}body.light-mode .btn-secondary:hover{background:var(--primary)!important;color:#fff!important}
   .hero{min-height:100vh;padding-top:9rem;padding-bottom:5rem;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem}.hero-content{display:flex;flex-direction:column;align-items:flex-start}.hero h1{font-size:3.5rem;font-weight:800;line-height:1.2;letter-spacing:-1.5px;margin-bottom:1.5rem}.hero p{color:var(--text-muted);font-size:1.2rem;margin-bottom:2.25rem;max-width:540px}.hero-buttons{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:3rem}.hero-social-proof{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--border-light);width:100%}.avatar-group{display:flex}.avatar-group img{width:40px;height:40px;border-radius:50%;border:2px solid var(--bg-dark);margin-left:-12px}.avatar-group img:first-child{margin-left:0}.proof-info p{margin:0;font-size:0.9rem;font-weight:600;color:var(--text-main)}.proof-info span{font-size:0.8rem;color:var(--text-muted)}.hero-demo-notice{font-size:0.775rem;color:var(--primary-text);background:rgba(124,58,237,0.08);border:1px dashed var(--primary-glow);border-radius:var(--radius-md);padding:0.45rem 0.85rem;margin-top:0.85rem;display:inline-flex;align-items:center;gap:0.5rem;line-height:1.4}.hero-demo-notice i{font-size:0.95rem;flex-shrink:0}.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}.hero-image-wrapper{position:relative;width:100%;max-width:500px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow-lg),var(--shadow-glow);transform-style:preserve-3d;will-change:transform}.hero-image-wrapper img{width:100%;height:auto;display:block}.floating-badge{position:absolute;padding:0.9rem 1.4rem;background:rgba(17,24,39,0.85);border:1px solid var(--border-light);backdrop-filter:blur(12px);border-radius:var(--radius-md);box-shadow:var(--shadow-md);display:flex;align-items:center;gap:0.8rem;z-index:5;animation:float 4s ease-in-out infinite}.floating-badge.badge-1{top:10%;left:-20px;animation-delay:0s}.floating-badge.badge-2{bottom:12%;right:-20px;animation-delay:2s}.floating-badge .icon-box{width:36px;height:36px;background:var(--grad-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}.floating-badge .badge-title{font-size:0.85rem;font-weight:700}.floating-badge .badge-sub{font-size:0.75rem;color:var(--text-muted)}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.scroll-indicator{position:absolute;bottom:0.25rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.8rem;cursor:pointer;transition:color var(--transit-fast)}.scroll-indicator:hover{color:var(--text-main)}section{position:relative;padding:6rem 1.5rem;max-width:1280px;margin:0 auto;z-index:2}.section-header{text-align:center;max-width:700px;margin:0 auto 4rem}.btn-lg{padding:1.1rem 2.2rem;font-size:1.05rem;border-radius:var(--radius-md)}.btn-shine::before{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transform:skewX(-20deg);transition:left 0.75s ease}.btn-shine:hover::before{left:150%}.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.4);transform:scale(0);animation:ripple-anim 0.6s linear;pointer-events:none}@keyframes ripple-anim{to{transform:scale(4);opacity:0}}
-  #cookie-banner,#cookie-modal-backdrop,#cookie-modal,.wa-popup,#back-to-top{opacity:0;visibility:hidden}#toast{opacity:0}
+  .cookie-banner,.cookie-modal-backdrop,.cookie-modal,.wa-popup,#back-to-top{opacity:0;visibility:hidden}#toast{opacity:0}
   </style>
   <link rel="preload" as="style" href="css/components.css" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" as="style" href="css/sections.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -595,6 +595,12 @@
               <div class="form-error">Insira um número com DDD.</div>
             </div>
 
+            <!-- Honeypot (anti-spam, invisível para humanos) -->
+            <div class="form-group" style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true">
+              <label for="hp-field">Não preencher</label>
+              <input type="text" id="hp-field" name="hp-field" tabindex="-1" autocomplete="off">
+            </div>
+
             <div class="form-group">
               <label for="message" class="form-label">Conte sobre seu Projeto *</label>
               <textarea id="message" class="form-input" placeholder="Descreva sua ideia: tipo de site, páginas, funcionalidades desejadas..."></textarea>
@@ -686,8 +692,8 @@
         <i class="fa-solid fa-cookie-bite"></i>
       </div>
       <div class="cookie-banner-text">
-        <h4><i class="fa-solid fa-circle-info" style="color: var(--primary);"></i> Privacidade &amp; Cookies</h4>
-        <p>Este site utiliza cookies para garantir o melhor funcionamento. Veja nossa <a href="politica-de-privacidade">Política de Privacidade</a>.</p>
+        <h4><i class="fa-solid fa-circle-info" style="color: var(--primary);"></i> Privacidade &amp; Preferências</h4>
+        <p>Este site utiliza armazenamento local no navegador e serviços de análise (Google Analytics 4) para melhorar sua experiência. Veja nossa <a href="politica-de-privacidade">Política de Privacidade</a>.</p>
       </div>
     </div>
     <div class="cookie-banner-actions">
@@ -709,7 +715,7 @@
     <div class="cookie-modal-header">
       <div style="display: flex; align-items: center; gap: 0.6rem;">
         <i class="fa-solid fa-shield-halved" style="color: var(--primary); font-size: 1.25rem;"></i>
-        <h3>Preferências de Cookies &amp; Privacidade</h3>
+        <h3>Preferências de Privacidade</h3>
       </div>
       <button id="cookie-modal-close" class="cookie-modal-close" aria-label="Fechar Modal">
         <i class="fa-solid fa-xmark"></i>
@@ -718,42 +724,43 @@
 
     <div class="cookie-modal-body">
       <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-        Personalize suas preferências de privacidade. Os cookies estritamente necessários são ativados por padrão para garantir o funcionamento correto do site.
+        Personalize suas preferências de privacidade. Nenhum dado é armazenado sem sua autorização — o armazenamento local (localStorage) só é ativado após você salvar sua escolha.
       </p>
 
       <!-- Category 1 -->
       <div class="cookie-category">
         <div class="cookie-category-header">
-          <div>
-            <span class="cookie-cat-title">🔒 Cookies Essenciais</span>
-            <span class="cookie-cat-status required">Sempre Ativo</span>
-          </div>
+          <span class="cookie-cat-title">🔒 Armazenamento Essencial</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="cookie-essential-check">
+            <span class="switch-slider"></span>
+          </label>
         </div>
-        <p class="cookie-cat-desc">Necessários para o funcionamento do site, navegação segura e salvamento de preferências de exibição (como tema claro/escuro).</p>
+        <p class="cookie-cat-desc">Salva localmente suas preferências de tema (claro/escuro), consentimento e estado do popup de WhatsApp. Se desabilitado, essas preferências não serão lembradas entre visitas.</p>
       </div>
 
       <!-- Category 2 -->
       <div class="cookie-category">
         <div class="cookie-category-header">
-          <span class="cookie-cat-title">📊 Cookies de Desempenho &amp; Estatísticas</span>
+          <span class="cookie-cat-title">📊 Google Analytics 4 (Estatísticas)</span>
           <label class="switch-toggle">
-            <input type="checkbox" id="cookie-analytics-check" checked>
+            <input type="checkbox" id="cookie-analytics-check">
             <span class="switch-slider"></span>
           </label>
         </div>
-        <p class="cookie-cat-desc">Permitem medir o tráfego de visitantes e entender quais seções da página geram mais interesse para melhorias contínuas.</p>
+        <p class="cookie-cat-desc">Coleta dados anônimos de navegação via Google Analytics 4 (páginas visitadas, tempo de sessão, origem do tráfego) para entender o desempenho do site e melhorar a experiência.</p>
       </div>
 
       <!-- Category 3 -->
-      <div class="cookie-category">
+      <div id="cookie-category-marketing" class="cookie-category">
         <div class="cookie-category-header">
           <span class="cookie-cat-title">📢 Cookies de Marketing &amp; Redes Sociais</span>
           <label class="switch-toggle">
-            <input type="checkbox" id="cookie-marketing-check" checked>
+            <input type="checkbox" id="cookie-marketing-check">
             <span class="switch-slider"></span>
           </label>
         </div>
-        <p class="cookie-cat-desc">Utilizados para redirecionamento estratégico (Pixel do Meta e Google Ads), exibindo anúncios relevantes em redes sociais.</p>
+        <p class="cookie-cat-desc">Utilizados para redirecionamento estratégico (Pixel do Meta e Google Ads), exibindo anúncios relevantes em redes sociais. Esta opção aparece apenas quando estas ferramentas estão configuradas no site.</p>
       </div>
     </div>
 
@@ -767,9 +774,8 @@
     </div>
   </div>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init('zTahZC9jxWvLfIaaj');</script>
+  <!-- EmailJS SDK (with Subresource Integrity) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS" crossorigin="anonymous"></script>
 
   <!-- JAVASCRIPT BUNDLE (minified, all modules in one) -->
   <script defer src="js/bundle.js"></script>

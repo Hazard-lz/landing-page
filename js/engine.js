@@ -153,7 +153,7 @@
       if (p) {
         const showCookiePrefs = cfg.analytics && cfg.analytics.enabled;
         const cookieLink = showCookiePrefs
-          ? ' | <a href="javascript:void(0)" role="button" id="open-cookie-modal-footer" style="color: var(--text-muted); text-decoration: underline;">Preferências de Cookies</a>'
+          ? ' | <a href="javascript:void(0)" role="button" id="open-cookie-modal-footer" style="color: var(--text-muted); text-decoration: underline;">Preferências de Privacidade</a>'
           : '';
         setHTML(p, `&copy; ${year} <span id="copyright-brand">${cfg.brand.name}</span>. Todos os direitos reservados. | <a href="politica-de-privacidade.html" style="color: var(--text-muted); text-decoration: underline;">Política de Privacidade</a>${cookieLink}`);
       }
